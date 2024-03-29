@@ -161,6 +161,10 @@ header img {
 		margin: 0;
 		padding: 0;
 		width: 100%;
+		width : 375px;
+		height: 50px;
+		border:solid;
+		background-color: gray;
 	}}
 	
 /* bloc 1 picto localisation de la barre de recherche  */
