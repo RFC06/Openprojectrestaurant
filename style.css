@@ -78,6 +78,7 @@ h3 {
 @media screen and (max-width: 768px) {
 	.main-container {
 		padding: 0;
+		width: 375px;
 	}}
 
 
@@ -87,6 +88,8 @@ h3 {
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	width:100%;
+	width:335px;
+	height:73px;
 }
 
 .card img {
@@ -103,6 +106,7 @@ h3 {
 		width: 100%;
 		height: 70%;
 		border-color: #000;
+	
 	}}
 
 .card-title {
@@ -112,6 +116,7 @@ h3 {
 
 .card-content {
 	padding: 0 15px;
+
 }
 
 .euro {
@@ -127,6 +132,7 @@ h3 {
 header {
 	display: flex;
 	justify-content: space-between;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -134,17 +140,31 @@ header {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
+		width: 375px;
 	}}
 
 /* logo booki */
 header img {
-	height: 20px;
+	height: 36x;
+	width:136px;
 	margin: 30px 0;
+	align-items: center;
+	
 }
 
+.text {
+	width :100%;
+
+}
+@media screen and (max-width: 768px) {
+	.text {
+	width: 375px;
+			
+	}}
 
 .text-subtitle p {
 	margin-top: 0;
+	
 }
 
 /* DIV : barre de recherche */
@@ -153,48 +173,34 @@ header img {
 	border: 0;
 	height: 70px;
 	width: 377px;
+	
 }
 
 @media screen and (max-width: 768px) {
 	.input-section {
 		justify-content: space-between;
-		margin: 0;
-		padding: 0;
 		width: 100%;
-		width : 375px;
-		height: 50px;
-		border:solid;
-		background-color: gray;
+		width: 375px;
+		
 	}}
 	
-/* bloc 1 picto localisation de la barre de recherche  */
-.input-section .input-section-label {
-	background-color: var(--main-bg-color);
-	padding: 16px;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
-
-/* bloc 2 picto de localisation de la barre de recherche  */
-.input-section .input-section-label i {
-	color: black;
-	font-size: 18px;
-	padding: 10px;
-}
-
-/* bloc 1 Marseille, France de la barre de recherche */
+/* bloc 1 Paris, Belleville de la barre de recherche */
 .input-section .input-section-field {
-	padding: 14px 24px;
+align-items: center;
 	border: 1px solid var(--main-bg-color);
 	border-right: 0;
 	width: 100%;
+	
 }
 
-/* texte Marseille, France de la barre de recherche */
+/* texte Paris, Belleville de la barre de recherche */
 .input-section-field::placeholder {
 	color: var(--black-color);
 	font-weight: 700;
 	font-size: 1.125rem;/* 18px */
+	align-items: center;
+	justify-content: center;
+	
 }
 
 @media screen and (max-width: 768px) {
@@ -204,6 +210,7 @@ header img {
 		margin: 0;
 		padding: 0;
 		width: 100%;
+		
 	}}
 
 /* barre de recherche formulaire 1 */
@@ -218,7 +225,7 @@ header img {
 	border-bottom-right-radius: 15px;
 	display: block;
 	height: 70px;
-	
+	border:solid;
 }
 
 @media screen and (max-width: 768px) {
@@ -230,42 +237,7 @@ header img {
 		width: 100%;
 	}}
 
-/* bouton RECHERCHER font awesome loupe */
-.input-section button {
-	display: none;
-	background-color: var(--main-color);
-	font-weight: 700;
-	font-size: 1.125rem;
-	/* 18px */
-	padding: 14px 16px;
-	border: 1px solid var(--main-color);
-	border-radius: 15px;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	color: var(--white-color);
-	height: 70px;
-	width: 80px;	
-}
 
-@media screen and (max-width: 768px) {
-	.input-section button {
-		display: block;
-	}}
-
-/* barre RECHERCHER cliquable font awesome loupe */
-.input-section input[type="submit"]:hover
-.input-section button:hover {
-	cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-	.input-section input[type="submit"]:hover {
-		display: none;
-
-	}}
-
-.input-section button i {
-	color: var(--white-color);
-}
 
 
 /****** RESTAURANTS ***********/
@@ -273,41 +245,28 @@ header img {
 
 #menu ul {
 	padding: 0; /* suppression du padding */
-	display: grid;
-    grid-template-columns: 1fr;
-	align-items: center;
-    gap:20px;
+	display: flex;
     width:100%;
-	border: solid;
 
+	
 }
-
-#menu p {
-	margin: 35px 0;
-}
-#menu ul .fa-solid {
-	margin-right: 10px;
-}
-
-#menu ul a {
-	padding: 0; /* suppression du padding */
-	display: grid;
-    grid-template-columns: 1fr;
-	align-items: center;
-    gap:20px;
-    width:100%;
-	border: solid;
-
-}
-
-
 @media screen and (max-width: 794px) {
 	#menu ul {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 15px;
-		width: 100%;
+		width : 335px;
+	    height: 73px;
+		border-radius: 20px;
+		justify-content:flex-start;
 	}}
+
+
+#menu ul .fa-solid {
+	margin-right: 10px;
+}
+
+
 
 
 #menu ul li:hover {
@@ -324,14 +283,9 @@ header img {
 	margin-top: 35px;
 	margin-left: 15px;
 	gap: 15px;
-}
-
-/* DIV filtre et DIV ( bouton 1, bouton 2, bouton 3 )  */
-.filtre>h3,
-.filtre>ul {
-	margin: 0px;	
 	
 }
+
 
 @media screen and (max-width: 768px) {
 	.filtre {
@@ -358,11 +312,9 @@ header img {
 	font-weight: 700;
 	gap: 20px;
 	align-items: center;	
+
 }
-#menu li .card {
-    border-radius: 15px;
-    border-color: #000;
-}
+
 @media screen and (max-width: 1440px) {
 	#menu li {
 		font-size: 14px;
@@ -381,25 +333,6 @@ header img {
 	background-color: var(--filter-bg-color);
 	/* Couleur de fond au survol */
 }
-/* div picto bulle chiffre : bouton 1, bouton 2, bouton 3, */
-.info-logement {
-	display: flex;
-	align-items: center;
-	margin-top: 35px;
-}
-
-.info-logement i {
-	font-size: 13px;
-	display: block;
-	width: 24px;
-	height: 24px;
-	line-height: 24px;
-	border: 1px solid var(--light-gray);
-	border-radius: 100px;
-	margin-right: 10px;
-	text-align: center;			
-}
-
 
 /****** RESTAURANTS ***********/
 .restaurants section {
@@ -407,9 +340,16 @@ header img {
 	border-radius: 20px;
 	padding: 30px;
 	box-sizing: border-box;
-	width:100%;
+	display : flex;
+	flex-wrap: wrap;
+	
+	
 }
-
+@media screen and (max-width: 768px) {
+	.restaurants section {
+	width: 100%;
+	
+	}}
 .restaurants-options-cards {
 	display: flex;
 	flex-wrap: wrap;
@@ -425,6 +365,7 @@ header img {
 	flex-direction: column;
 	justify-content: space-between;
 	width: calc(25% - 15px);
+	
 }
 
 @media screen and (max-width: 768px) {
@@ -438,8 +379,11 @@ header img {
 	}}
 
 .restaurants-options-cards .card {
-	height: 100%;
+	
 	border: 0;
+	width : 340px;
+	height:251px;
+	
 }
 
 .restaurants-options-cards .card img {
@@ -447,6 +391,7 @@ header img {
 	width: 100%;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+	
 }
 
 @media screen and (max-width: 768px) {
@@ -465,6 +410,7 @@ header img {
 
 .restaurants-cards .card-rating {
 	margin-bottom: 5px;
+	
 }
 
 /* FOOTER */
@@ -486,13 +432,5 @@ footer {
 		gap: 30px;
 		margin: 0;
 		padding: 20px;
-	}}
-
-
-/* Le code ci-dessous correspond à la version responsive globale */
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-	.restaurants {
-		width: 100%;
 	}}
 
