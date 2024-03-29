@@ -278,6 +278,7 @@ header img {
 	align-items: center;
     gap:20px;
     width:100%;
+	border: solid;
 
 }
 
@@ -286,6 +287,17 @@ header img {
 }
 #menu ul .fa-solid {
 	margin-right: 10px;
+}
+
+#menu ul a {
+	padding: 0; /* suppression du padding */
+	display: grid;
+    grid-template-columns: 1fr;
+	align-items: center;
+    gap:20px;
+    width:100%;
+	border: solid;
+
 }
 
 
@@ -402,6 +414,10 @@ header img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	width : 340px;
+	height: 1058px;
+	margin: 5px;
+
 }
 
 .restaurants-options-cards a {
