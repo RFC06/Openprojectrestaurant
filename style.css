@@ -25,11 +25,11 @@ html {
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
 }
-/* picto rond i info  */
-.fa-info {
-	border: 1px solid gray;
+/* picto rond  */
+.fa-rond {
+	border: 1px solid var(--main-color);
 	border-radius: 50%;
-	padding: 4px 9px;
+	
 }
 
 body {
@@ -96,6 +96,7 @@ h3 {
 	object-fit: cover;
 	width: 100%;
 }
+
 
 @media screen and (max-width: 768px) {
 	.card img {
@@ -335,29 +336,23 @@ align-items: center;
 }
 
 /****** RESTAURANTS ***********/
-.restaurants section {
-	background-color: var(--secondary-main-bg-color);
-	border-radius: 20px;
-	padding: 30px;
-	box-sizing: border-box;
-	display : flex;
-	flex-wrap: wrap;
-	
+
+.section-restaurants {
+	border:solid;
+
 	
 }
 @media screen and (max-width: 768px) {
-	.restaurants section {
-	width: 100%;
+	.section-restaurants {
+	
+	display:flex;
+	flex-direction:column;
 	
 	}}
 .restaurants-options-cards {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
 	justify-content: space-between;
-	width : 340px;
-	height: 1058px;
-	margin: 5px;
-
 }
 
 .restaurants-options-cards a {
