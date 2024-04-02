@@ -30,6 +30,7 @@ html {
 	border: 1px solid var(--main-color);
 	border-radius: 50%;
 	
+	
 }
 
 body {
@@ -238,7 +239,22 @@ align-items: center;
 		width: 100%;
 	}}
 
+.card-bouton  {
+	width: 218px;
+	height: 50px;
+	border-radius: 20px;
+	background-color: #9356DC;
+	justify-content: center;
+	align-items: center;
+	color:white;
 
+
+}
+@media screen and (max-width: 768px) {
+	.card-bouton ul li {
+	
+	align-items: center;
+}}
 
 
 /****** RESTAURANTS ***********/
@@ -246,10 +262,10 @@ align-items: center;
 
 #menu ul {
 	padding: 0; /* suppression du padding */
-	display: flex;
-    width:100%;
+	display: grid;
+	grid-template-columns: 2fr;
+ 
 
-	
 }
 @media screen and (max-width: 794px) {
 	#menu ul {
@@ -260,20 +276,18 @@ align-items: center;
 	    height: 73px;
 		border-radius: 20px;
 		justify-content:flex-start;
+		
+		
 	}}
 
+
+
+	
 
 #menu ul .fa-solid {
 	margin-right: 10px;
 }
 
-
-
-
-#menu ul li:hover {
-	background-color: var(--filter-bg-color);
-	/* Couleur de fond au survol */
-}
 
 
 /* DIV bulles ( bouton 1, bouton 2, bouton 3 ) */
@@ -284,7 +298,7 @@ align-items: center;
 	margin-top: 35px;
 	margin-left: 15px;
 	gap: 15px;
-	
+
 }
 
 
@@ -311,24 +325,27 @@ align-items: center;
 	margin: 0;
 	font-size: 18px;
 	font-weight: 700;
-	gap: 20px;
-	align-items: center;	
-
+	gap: 20px;	
+	width: 375px;
+	height:73px;	
 }
-
-@media screen and (max-width: 1440px) {
-	#menu li {
-		font-size: 14px;
-		gap: 10px;
-	}}
 
 @media screen and (max-width: 768px) {
 	#menu li {
 		padding: 15px 11px;
 		font-size: 14px;
 		gap: 6px;
+		width: 335px;
+		height:73px;	
 	}}
-
+	@media screen and (max-width: 1440px) {
+		#menu li {
+			font-size: 14px;
+			gap: 10px;
+			width: 335px;
+			height:73px;	
+		}}
+	
 /* /* Couleur de fond au survol des bulles ( bouton 1, bouton 2, bouton 3 ) */
 #menu li a:hover {
 	background-color: var(--filter-bg-color);
@@ -337,85 +354,64 @@ align-items: center;
 
 /****** RESTAURANTS ***********/
 
-.section-restaurants {
-	border:solid;
+.restaurants section {
+	background-color: var(--secondary-main-bg-color);
+	border-radius: 20px;
+	padding: 30px;
+	box-sizing: border-box;
 
-	
-}
-@media screen and (max-width: 768px) {
-	.section-restaurants {
-	
-	display:flex;
-	flex-direction:column;
-	
-	}}
-.restaurants-options-cards {
+  }
+  
+  .restaurants-cards {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
-}
-
-.restaurants-options-cards a {
+	margin:10px;
+	padding: 10px;
+	gap:10px;
+	
+  }
+  
+  .restaurants-cards a {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: calc(25% - 15px);
-	
-}
-
-@media screen and (max-width: 768px) {
-	.restaurants-options-cards a {
-		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-bottom: 15px;
-	}}
-
-.restaurants-options-cards .card {
-	
-	border: 0;
-	width : 340px;
-	height:251px;
-	
-}
-
-.restaurants-options-cards .card img {
-	height: 200px;
-	width: 100%;
+  }
+  
+  .restaurants-cards .card {
+	height: 100%;
+  }
+  
+  .restaurants-cards .card img {
+	height: 251px;
+	width: 340px;
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
-	
-}
-
-@media screen and (max-width: 768px) {
-	.restaurants-options-cards .card img {
-		width: 100%;
-		display: block;
-		flex-direction: column;
-		height: 140px;
-		border-radius: 15px 15px 0px 0;
+  }
+  
+  .restaurants-cards .card-title {
+	margin: 20px 20px;
+  }
+  @media (max-width: 1024px) {
+	.restaurants-cards {
+	  flex-direction: column;
+	  gap:15px;
 	}}
-
-.restaurants-options-cards .card-title {
-	margin: 20px 0;
-}
-
-
-.restaurants-cards .card-rating {
-	margin-bottom: 5px;
-	
-}
+  
+	.restaurants {
+	  width: 100%;
+	}
 
 /* FOOTER */
 
 footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	display: flex;	
+	justify-content: space-around;
 	background-color: var(--main-bg-color);
 	padding: 15px;
+	background-color: black;
+	color:white;
 }
 
 @media screen and (max-width: 768px) {
