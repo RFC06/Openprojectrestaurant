@@ -278,19 +278,28 @@ header div.filter-search {
 
 
 .card-bouton  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 218px;
 	height: 50px;
 	border-radius: 20px;
 	background-color: #9356DC;
-	justify-content: center;
-	align-items: center;
 	color:white;
-
-
 }
+
+
+@media screen and (max-width: 768px) {
+	.card-bouton {
+		justify-content: center;
+		align-items: center;
+
+	}}
+
+
 @media screen and (max-width: 768px) {
 	.card-bouton ul li {
-	
 	align-items: center;
 }}
 
@@ -381,73 +390,78 @@ padding: 0;
 /****** RESTAURANTS ***********/
 
 .restaurants section {
-	background-color: var(--secondary-main-bg-color);
-	padding: 0px;
-	width :100%;
-	background-color: lightgray;
-	
-
+    background-color: var(--secondary-main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
   }
-  
+
   .restaurants-cards {
-	display: grid;
-	grid-template-columns: 2fr 2fr;
-	margin:10px;
-	padding: 10px;
-	gap:10px;
-	
-	
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
   }
-  
-  @media screen and (max-width: 768px) {
-	#menu li {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-
-
-	}}
 
   .restaurants-cards a {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: calc(25% - 15px);
-	
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(25% - 15px);
   }
-  
+  @media screen and (max-width: 768px) {
+    .restaurants-cards a{
+    width: 100%;
+    display: flex;
+    flex-wrap: row;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+
+    }}
   .restaurants-cards .card {
-	height:251px;
-	width:340px;
-	display: flex;
-	flex-wrap: wrap;
-
+    height: 100%;
+    border:0;
   }
-  
-
 
   .restaurants-cards .card img {
-	display: flex;
-	flex-direction: column;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-	
-  }
-  
-  .restaurants-cards .card-title {
-	margin: 20px 20px;
-  }
-  @media (max-width: 1024px) {
-	.restaurants-cards {
-		display: flex;
-	  flex-direction: column;
-	  gap:15px;
-	}}
-  
-	.restaurants {
-	  width: 100%;
-	}
+   
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
 
-/* FOOTER */
+@media screen and (max-width: 768px) {
+    .restaurants-cards .card img{
+        width: 100%;
+        display: block;
+        flex-direction: column;
+       
+        border-radius: 15px 15px 0px 0;
+
+    }}
+
+.restaurants-cards .card-title {
+  margin: 20px 20px;
+}
+
+
+.restaurants-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+	
+
+
+
+
+
 
 footer {
 	display: flex;	
