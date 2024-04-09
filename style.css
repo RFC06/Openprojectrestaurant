@@ -79,10 +79,7 @@ h3 {
 
 @media screen and (max-width: 768px) {
 	.main-container {
-		padding: 10px;
-		
-		
-		
+		padding: 10px;		
 	}}
 
 
@@ -170,12 +167,16 @@ header div.filter-search {
 
 .text {
 	width :100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
 	
 
 }
 @media screen and (max-width: 768px) {
 	.text {
-	width: 375px;
+	width: 100%;
 			
 	}}
 
@@ -304,8 +305,7 @@ padding: 0;
 }
 @media screen and (max-width: 794px) {
 	#menu ul {
-		display: grid;
-		grid-template-columns: 2fr;
+		display: flex;
 		gap: 15px;
 		border-radius: 20px;
 	}}
