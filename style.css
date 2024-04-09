@@ -2,7 +2,7 @@
 
 :root {
 	--main-color:#9356DC;
-	--black-color: #FF79DA;
+	--black-color: #000;
 	--white-color: #99E2D0;
 }
 
@@ -74,14 +74,15 @@ h3 {
 .main-container {
 	width: 100%;
 	max-width: 1440px;
-	padding: 0 50px;
-	
+	padding: 0 50px;	
 }
 
 @media screen and (max-width: 768px) {
 	.main-container {
-		padding: 0;
-		width: 500px;
+		padding: 10px;
+		
+		
+		
 	}}
 
 
@@ -135,7 +136,8 @@ h3 {
 
 header {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 
 }
 
@@ -144,10 +146,10 @@ header {
 		flex-direction: column;
 		align-content: center;
 		align-items: center;
-		width: 375px;
+	
 	}}
 
-/* logo booki */
+/* logo  */
 header img {
 	height: 36x;
 	width:136px;
@@ -155,9 +157,20 @@ header img {
 	align-items: center;
 	
 }
+header div.filter-search {
+	width:100%;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+
+}
+
+
+
 
 .text {
 	width :100%;
+	
 
 }
 @media screen and (max-width: 768px) {
@@ -192,31 +205,35 @@ header img {
 .input-section {
 	display: flex;
 	border: 0;
-	height: 70px;
-	width: 377px;
-	
+	height: 50px;	
 }
 
 @media screen and (max-width: 768px) {
 	.input-section {
 		justify-content: space-between;
-		width: 100%;
-		width: 375px;
+		background-color: lightgray;
+		
+		
 		
 	}}
+
+	.input-section-label .fa-solid.fa-location-dot {
+		color: black;
+
+	}
 	
 /* bloc 1 Paris, Belleville de la barre de recherche */
 .input-section .input-section-field {
-align-items: center;
+	
 	border: 1px solid var(--main-bg-color);
 	border-right: 0;
-	width: 100%;
+	background-color: transparent;
 	
 }
 
 /* texte Paris, Belleville de la barre de recherche */
 .input-section-field::placeholder {
-	color: var(--black-color);
+	color: black;
 	font-weight: 700;
 	font-size: 1.125rem;/* 18px */
 	align-items: center;
@@ -257,6 +274,7 @@ align-items: center;
 		padding: 0;
 		width: 100%;
 	}}
+
 
 .card-bouton  {
 	width: 218px;
