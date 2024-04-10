@@ -440,22 +440,22 @@ padding: 0;
 
 
 footer {
-	display: flex;	
-	justify-content: space-around;
-	background-color: var(--main-bg-color);
-	padding: 15px;
-	background-color: black;
-	color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+	color: white;
+    padding: 15px;
 }
 
 @media screen and (max-width: 768px) {
-	footer {
-		flex-direction: column;
-		width: 100%;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: 30px;
-		margin: 0;
-		padding: 20px;
-	}}
+    footer {
+        flex-direction: column;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:30px;
+        margin: 0;
+        padding:20px;
+            }}
 
