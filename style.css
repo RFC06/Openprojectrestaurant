@@ -88,6 +88,7 @@ h3 {
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	width: 335px;
 	height: 73px;
+	
 }
 
 @media screen and (max-width: 768px) {
@@ -96,6 +97,30 @@ h3 {
 		height: 73px;
 				
 	}}
+
+	.card-menu {
+		background-color: white;
+		border-radius: 20px;
+		padding: 0px;
+		box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+		width: 500px;
+		height: 73px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+	}
+	
+	@media screen and (max-width: 768px) {
+		.card-menu {
+			width: 100%;
+			
+					
+		}}
+
+
+
+
 
 .card img {
 	object-fit: cover;
@@ -176,27 +201,48 @@ header div.filter-search {
 	margin:10px;
 }
 
-.section-three {
 
-}
 
 .card-hero img{
-	width: 1440px;
-	height:383px;
+width:1024px;
+height:275px;
+margin:50px;
 
 }
 
 @media screen and (max-width: 768px) {
 	.card-hero img{
+		width:100%;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		
-		width: 375px;
-		height: 275px;
 		border-color: #000;
+		margin:0px;
 	
 	}}
+
+	.filtre-menu {
+		display: flex;
+		flex-direction :column;
+		justify-content: center;
+		align-items: center;
+		gap:15px;
+		margin:10px;
+		
+	}
+	
+	@media screen and (max-width: 768px) {
+		.filtre-menu {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width:100%;
+			
+		}}
+
+
+
 /* DIV : barre de recherche */
 .input-section {
 	display: flex;
@@ -370,15 +416,31 @@ padding: 0;
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+	
   }
 
   .restaurants-cards {
-    display: flex;
-    flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
     justify-content: space-between;
-   
+	
   }
 
+  .restaurants-cards {
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+    justify-content: space-between;
+	width: 100%;
+	gap:20px;
+	
+  }
+
+  @media screen and (max-width: 768px) {
+	.restaurants-cards {
+		display: flex;
+		flex-direction: column;
+
+	}}
   .restaurants-cards a {
     display: flex;
     flex-direction: column;
@@ -398,7 +460,8 @@ padding: 0;
     }}
   .restaurants-cards .card {
     height: 100%;
-    border:0;
+	
+   
   }
 
   .restaurants-cards .card img {
@@ -427,9 +490,10 @@ padding: 0;
     margin-bottom: 5px;
 }
 
+.article.card {
+	border:solid;
 
-
-
+}
 
 
 	
