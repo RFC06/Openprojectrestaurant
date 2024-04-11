@@ -1,9 +1,12 @@
 /****** General ***********/
 
 :root {
-	--main-color:#9356DC;
+	--blue-gray-color:#c5e2f8;
 	--black-color: #000;
-	--white-color: #99E2D0;
+	--gray-color: #d5f0f8;
+	--blue-color:#89c8fa;
+	--green-color:#99e2d0;
+	--pink-color:#fcc0ce;
 }
 
 /****** défilement fluide de la page html ***********/
@@ -82,7 +85,7 @@ h3 {
 
 
 .card {
-	background-color: white;
+	background-color: #f6f6f6;
 	border-radius: 20px;
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
@@ -103,7 +106,7 @@ h3 {
 		border-radius: 20px;
 		padding: 0px;
 		box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-		width: 500px;
+		width: 100%;
 		height: 73px;
 		display: flex;
 		flex-direction: column;
@@ -113,21 +116,15 @@ h3 {
 	
 	@media screen and (max-width: 768px) {
 		.card-menu {
-			width: 100%;
-			
-					
+			width: 375px;
+								
 		}}
-
-
-
-
 
 .card img {
 	object-fit: cover;
 	width: 340px;
 	height:231px;
 }
-
 
 @media screen and (max-width: 768px) {
 	.card img {
@@ -187,7 +184,7 @@ header img {
 }
 header div.filter-search {
 	width:100%;
-	background-color: lightgray;
+	background-color:lightgray;
 	display: flex;
 	justify-content: center;
 
@@ -253,10 +250,7 @@ margin:50px;
 @media screen and (max-width: 768px) {
 	.input-section {
 		justify-content: space-between;
-		background-color: lightgray;
-		
-		
-		
+		background-color: lightgray;	
 	}}
 
 	.input-section-label .fa-solid.fa-location-dot {
@@ -349,7 +343,7 @@ margin:50px;
 
 
 .section-two {
-	background-color: pink;
+	background-color: #f6f6f6;
 	width :100%;
 	display: flex;
 	flex-direction: center;
@@ -419,18 +413,12 @@ padding: 0;
 	
   }
 
-  .restaurants-cards {
-	display: grid;
-	grid-template-columns: repeat(2, 2fr);
-    justify-content: space-between;
-	
-  }
 
   .restaurants-cards {
 	display: grid;
 	grid-template-columns: repeat(2, 2fr);
     justify-content: space-between;
-	width: 100%;
+
 	gap:20px;
 	
   }
@@ -459,14 +447,23 @@ padding: 0;
 
     }}
   .restaurants-cards .card {
-    height: 100%;
+   width:490px;
+   height:251px;
 	
-   
   }
+  @media screen and (max-width: 768px) {
+	.restaurants-cards .card {
+  
+	width:490px;
+	height:251px;
+	 
+   }}
+ 
 
   .restaurants-cards .card img {
    
     width: 100%;
+	height:200px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -474,7 +471,7 @@ padding: 0;
 @media screen and (max-width: 768px) {
     .restaurants-cards .card img{
         width: 100%;
-        display: block;
+        display: flex;
         flex-direction: column;
        
         border-radius: 15px 15px 0px 0;
