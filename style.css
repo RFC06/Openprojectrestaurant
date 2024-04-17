@@ -1,8 +1,5 @@
 /****** General ***********/
-.roboto-regular { 
-	font-family : "Roboto", sans-serif ; 
 
-}
 :root {
 	--blue-gray-color:#c5e2f8;
 	--black-color: #000;
@@ -18,7 +15,7 @@ html {
 }
 /* icônes */
 .fa-solid {
-	color: black ;
+	color: var(--main-color) ;
 	gap: 10px;
 }
 /* étoiles - coeur à tester  */
@@ -26,12 +23,10 @@ html {
 	color: var(--main-color);
 }
 /* picto input localisation  */
-.fa-solid .fa-location-dot {
+.fa-solid.fa-location-dot {
 	padding: 16px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
-	color:black;
-	border:solid;
 }
 /* picto rond  */
 .fa-rond {
@@ -58,7 +53,6 @@ h1 {
 h2{
 	font-size: 18px;
 	margin: 0px;
-	align-items:left;
 	
 	
 }
@@ -143,12 +137,11 @@ h3{
 	border-radius: 20px;
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-	width: 340px;
+	width: 100%;
 	height: 73px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 	
 }
 	
@@ -159,27 +152,6 @@ h3{
 	}
 }
 
-.card-menu-food {
-	background-color: white;
-	border-radius: 20px;
-	padding: 0px;
-	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-	width: 490px;
-	height: 73px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	
-	
-}
-	
-@media screen and (max-width: 768px) {
-	.card-menu-food {
-		width: 375px;
-							
-	}
-}
 
 /* HEADER */
 
@@ -348,7 +320,7 @@ margin:50px;
 	height: 50px;
 
 	border-radius: 20px;
-	background-color: radial-gradient(circle at 10% 20%, rgb(210, 36, 129) 0%, rgb(152, 75, 215) 90%);;
+	background-color: #9356DC;
 	color:white;
 
 
@@ -363,8 +335,7 @@ margin:50px;
 		height: 50px;
 	
 		border-radius: 20px;
-		background: rgb(124,102,128);
-background: linear-gradient(90deg, rgba(124,102,128,1) 0%, rgba(113,6,149,1) 7%, rgba(145,8,181,1) 9%, rgba(171,17,228,1) 15%);
+		background-color: #9356DC;
 		color:white;
 		
 	}}
@@ -380,7 +351,6 @@ background: linear-gradient(90deg, rgba(124,102,128,1) 0%, rgba(113,6,149,1) 7%,
 padding: 0;
 	display: flex;
 	justify-content: center;
-
 }
 @media screen and (max-width: 794px) {
 	#menu ul {
@@ -509,20 +479,3 @@ footer {
         padding:20px;
             }}
 
-			.validation {
-				padding: 30px; 
-			
-				border-top-right-radius: 15px;
-				border-bottom-right-radius: 15px;
-				color:black;
-				border:solid;
-				background-color: #99e2d0;
-			}		
-
-			.rectangle-nouveau {
-				padding: 30px; 
-			
-				color:black;
-				border:solid;
-				background-color: #99e2d0;
-			}	
