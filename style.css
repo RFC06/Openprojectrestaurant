@@ -30,8 +30,15 @@ html {
 	
 }
 .fa-solid {
-	color:#9356dc;
-	padding: 5px;
+	width: 13.02px;
+	height: 19.9px;
+	top: 529.54px;
+	left: 65.98px;
+	gap: 10px;
+	opacity: 0px;
+	color: #9356dc;
+	margin:10px;
+	
 }
 
 .fa-regular{
@@ -69,16 +76,65 @@ a {
 }
 
 h1 {
-	font-size: 22px;
-	margin-bottom: 8px;
+width: 275px;
+height: 68px;
+top: 152px;
+left: 42px;
+gap: 0px;
+opacity: 0px;
+
+font-family: Roboto;
+font-size: 24px;
+font-weight: 700;
+line-height: 28.13px;
+text-align: center;
+
 }
 
-h2{
-	font-size: 18px;
-	margin: 0px;
+.sous-titre {
+width: 315px;
+height: 46px;
+top: 220px;
+left: 34px;
+gap: 0px;
+opacity: 0px;
+margin:15px;
+
+
+font-family: Roboto;
+font-size: 18px;
+font-weight: 300;
+line-height: 21.09px;
+text-align: center;
+
 	
-	
+
 }
+
+
+h2{
+width: 275px;
+height: 31px;
+top: 448px;
+left: 20px;
+gap: 0px;
+opacity: 0px;
+
+
+font-family: Roboto;
+font-size: 24px;
+font-weight: 700;
+line-height: 28.13px;
+text-align: left;
+
+
+	
+
+}
+
+
+
+
 h3{
 	font-size: 18px;
 	margin: 0px;
@@ -104,11 +160,21 @@ h3{
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	min-width: 260px;
-	
-	
 	position:relative;
+	width:490px;
+	height:251px;
+	gap:70px;
+	margin: 50px;
 
 }
+
+@media screen and (max-width: 768px) {
+	.card{
+
+	margin:0;
+	width:100%;
+}}
+
 
 
 .card img {
@@ -146,9 +212,7 @@ h3{
   }
 
 .card-content {
-	/*padding: 0;
-	width:100%;
-	height:150px;*/
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -177,15 +241,31 @@ h3{
 	border-radius: 20px;
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-	width: 100%;
+	width: 322px;
 	height: 73px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap:30px;
+	margin:20px;
+	left:30px;
+	
 	
 }
+
+@media screen and (max-width: 768px) {
+	.card-menu{
+width: 335px;
+height: 72.38px;
+top: 505px;
+left: 20px;
+
+}}
+
 .card-menu ul {
 	position:relative;
+	
+	
 }
 
 
@@ -233,6 +313,9 @@ header div.filter-search {
 	align-items: center;
 	justify-content: center;
 	padding:30px;
+
+
+
 }
 
 .section-two-text {
@@ -364,6 +447,11 @@ margin:50px;
 
 	width: 218px;
 	height: 50px;
+	top: 293px;
+	left: 82px;
+	gap: 15px;
+	opacity: 0px;
+	
 
 	border-radius: 20px;
 	background: rgb(147,86,220);
@@ -433,6 +521,8 @@ padding: 0;
 .restaurants section {
     background-color: var(--secondary-main-bg-color);
     padding: 30px;
+
+	
 }
 
 .restaurants-cards {
@@ -440,6 +530,8 @@ padding: 0;
 	grid-template-columns: repeat(1, 1fr);
     justify-content: space-between;
 	gap:20px;
+
+	
 }
 
 @media screen and (min-width: 600px) {
@@ -523,8 +615,8 @@ footer {
 				color: #fff; /* Couleur du texte */
 				font-size: 14px;
 				font-weight: bold;
-				
 				padding: 5px;
+
 				position:absolute;
 				left:-12px;
 				display: flex;
@@ -532,7 +624,10 @@ footer {
 
 	
 			  }
+
 			  
+
+
 			  .click-button {
 				
 					width: 60px;
