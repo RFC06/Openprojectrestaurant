@@ -1,76 +1,4 @@
 /****** General ***********/
-.roboto-thin {
-	font-family: "Roboto", sans-serif;
-	font-weight: 100;
-	font-style: normal;
-  }
-  
-  .roboto-light {
-	font-family: "Roboto", sans-serif;
-	font-weight: 300;
-	font-style: normal;
-  }
-  
-  .roboto-regular {
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-  
-  .roboto-medium {
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-  }
-  
-  .roboto-bold {
-	font-family: "Roboto", sans-serif;
-	font-weight: 700;
-	font-style: normal;
-  }
-  
-  .roboto-black {
-	font-family: "Roboto", sans-serif;
-	font-weight: 900;
-	font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 100;
-	font-style: italic;
-  }
-  
-  .roboto-light-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 300;
-	font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 400;
-	font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 500;
-	font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 700;
-	font-style: italic;
-  }
-  
-  .roboto-black-italic {
-	font-family: "Roboto", sans-serif;
-	font-weight: 900;
-	font-style: italic;
-  }
-  
 
 :root {
 	--blue-gray-color:#c5e2f8;
@@ -122,6 +50,7 @@ body {
 	display: flex;
 	justify-content: center;
 	margin: 0;
+	font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -596,10 +525,16 @@ text-align: center;
 /* DIV  (bouton 1, bouton 2, bouton 3, */ 
 /****** SECTION THREE ***********/
 .section-three .info-steps {
-	padding:20px;
-
+	padding:50px;
 
 }
+@media screen and (max-width: 768px) {
+	.section-three {
+		padding:20px;
+
+	}}
+
+
 .section-three #menu ul {
 padding: 0;
 	display: flex;
@@ -636,16 +571,28 @@ padding: 0;
 
 .restaurants section {
     background-color: var(--secondary-main-bg-color);
-    padding: 30px;
+    padding: 50px;
+
 
 	
 }
+
+@media screen and (max-width: 768px) {
+.restaurants section {
+   
+    padding: 20px;
+	
+
+	
+}}
+
+
 
 .restaurants-cards {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
     justify-content: space-between;
-	gap:20px;
+	gap:0px;
 
 	
 }
@@ -696,32 +643,69 @@ padding: 0;
 }
 
 
+  
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+  }
+  
+  .content {
+	padding: 20px;
+  }
+  
+  footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+  }
+  
+  .footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap:20px;
+  }
+  
+  .logo img {
+	width: 100px; /* Ajustez la largeur du logo selon vos besoins */
+	filter: invert(100%); /* Inverse les couleurs de l'image pour la rendre blanche */
+  }
+  
+  
+/* Media Query pour les écrans de taille maximale de 768px (taille typique des smartphones) */
+@media (max-width: 768px) {
+	.footer-content {
+	  flex-direction: column; /* Change la direction en colonnes */
+	  text-align: left; /* Aligne le texte à gauche */
+	  margin-left: 0; /* Supprime la marge à gauche */
+	  margin-right: 0; /* Supprime la marge à droite */
+	}
+  
+	.footer-section {
+	  margin-bottom: 10px; /* Ajoute un espace entre les sections */
+	  padding-left: 10px; /* Ajoute un espace à gauche */
+	  text-align: left; /* Aligne le texte à gauche dans la version mobile */
+	}
+  }
+  
+  /* Media Query pour les écrans de taille minimale de 769px (grands écrans) */
+  @media (min-width: 769px) {
+	.footer-content {
+	  align-items: flex-start; /* Aligne les éléments au début de la ligne */
+	  justify-content: flex-end; /* Aligne le contenu à droite */
+	  margin-right: 10px; /* Ajoute une marge à droite */
+	}	
+
+	.logo {
+	  order: 5; /* Définit l'ordre du logo après les autres éléments */
+	}
+  }	
+  
 
 
 
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: black;
-	color: white;
-    padding: 15px;
-}
 
-@media screen and (max-width: 768px) {
-    footer {
-        flex-direction: column;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap:15px;
-        margin: 0;
-        padding:10px;
-            }}
 
-			.footer-logo  {
-				color:white;
-			}
-			/* BOUTONS CRÉES */
 
 
 			.circle-button {
