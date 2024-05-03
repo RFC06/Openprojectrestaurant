@@ -1,11 +1,74 @@
 /****** General ***********/
-
-
+.roboto-thin {
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+  }
+  
+  .roboto-light {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+  }
   
   .roboto-regular {
 	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	font-style: normal;
+  }
+  
+  .roboto-medium {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+  }
+  
+  .roboto-bold {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+  }
+  
+  .roboto-black {
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 100;
+	font-style: italic;
+  }
+  
+  .roboto-light-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+  }
+  
+  .roboto-black-italic {
+	font-family: "Roboto", sans-serif;
+	font-weight: 900;
+	font-style: italic;
   }
   
 
@@ -40,15 +103,6 @@ html {
 	margin:10px;
 	
 }
-
-.fa-regular{
-	
-	padding:0px;
-
-	
-}
-
-
 
 /* picto input localisation  */
 .fa-solid.fa-location-dot {
@@ -107,7 +161,6 @@ font-weight: 300;
 line-height: 21.09px;
 text-align: center;
 
-	
 
 }
 
@@ -143,9 +196,20 @@ h3{
 	font-weight: bold;
 }
 
+h4 {
+font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 21.09px;
+text-align: left;
+}
+
+
+
 .section-title {
 	margin: 0;
 	font-size: 22px;
+	
 }
 
 .main-container {
@@ -161,31 +225,39 @@ h3{
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	min-width: 260px;
 	position:relative;
-	width:490px;
-	height:251px;
+
 	gap:70px;
 	margin: 50px;
 
 }
 
-@media screen and (max-width: 768px) {
-	.card{
+	@media screen and (max-width: 768px) {
+		.card {
+		  width: 340px; /* Définir la largeur de la carte */
+		  height: 251px; /* Définir la hauteur de la carte */
+		  margin: 0 auto 20px; /* Centrer la carte horizontalement et ajouter un espace en bas */
+		}
+	  }
 
-	margin:0;
-	width:100%;
-}}
+
+@media screen and (max-width: 768px) {
+	.card {
+	  width: 100%; /* S'assurer que le texte occupe la largeur totale */
+	  text-align: center; /* Centrer le texte horizontalement */
+	  margin-top: 15px; /* Ajouter un peu d'espace en haut */
+	}}
+  
 
 
 
 .card img {
 	object-fit: cover;
-	width: 340px;
-	height:231px;
+
 }
 
 @media screen and (max-width: 768px) {
 	.card img {
-		width:70%;
+	
 	
 		flex-direction: column;
 		align-items: center;
@@ -195,6 +267,11 @@ h3{
 	
 	}
 }
+
+.card h4 {
+	margin-bottom: 5px; /* Ajouter un peu d'espace en bas du titre */
+  } 
+  
 
 .card div.nouveau-tag {
 
@@ -212,19 +289,44 @@ h3{
   }
 
 .card-content {
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding:15px;
+	padding:2px;
+	
 }
 
+@media screen and (max-width: 768px) {
+	.card-content {
+	  padding: 15px; /* Ajouter de l'espace à l'intérieur de card-content */
+	}
+  
+	.card-content h4 {
+	  margin: 0; /* Supprimer les marges par défaut */
+	  font-family: Roboto;
+font-size: 18px;
+font-weight: 700;
+line-height: 21.09px;
+text-align: left;
 
-.card-content .card-title {
-	font-size: 16px;
-	display: flex;
-}
+	}
+  
+	.card-content div {
+	  margin-bottom: 10px; /* Ajouter une marge inférieure de 5 pixels */
 
+	  overflow: hidden; /* Empêcher le dépassement du contenu */
+	  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+	  text-overflow: ellipsis; /* Ajouter des points de suspension si le texte dépasse */
+
+font-family: Roboto;
+font-size: 17px;
+font-weight: 300;
+line-height: 19.92px;
+text-align: left;
+
+	}
+  }
+  
 .euro {
 	font-weight: 700;
 }
@@ -264,6 +366,12 @@ left: 20px;
 
 .card-menu ul {
 	position:relative;
+	font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 18.75px;
+text-align: left;
+
 	
 	
 }
@@ -458,6 +566,14 @@ margin:50px;
 	background: linear-gradient(0deg,rgba(147,86,220,1)0%, rgba(255,121,218,1)100%);
 	color:white;
 
+	
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 18.75px;
+text-align: center;
+
+
 
 }
 @media screen and (max-width: 768px) {
@@ -602,7 +718,9 @@ footer {
         padding:10px;
             }}
 
-
+			.footer-logo  {
+				color:white;
+			}
 			/* BOUTONS CRÉES */
 
 
