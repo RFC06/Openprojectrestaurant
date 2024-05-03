@@ -1,26 +1,24 @@
 /****** General ***********/
 
 :root {
-	--blue-gray-color:#c5e2f8;
+	--blue-gray-color: #c5e2f8;
 	--black-color: #000;
 	--gray-color: #d5f0f8;
-	--blue-color:#89c8fa;
-	--green-color:#99e2d0;
-	--pink-color:#fcc0ce;
-	--light-gray-color:#eaeaea;
-}
-
-/****** défilement fluide de la page html ***********/
-html {
+	--blue-color: #89c8fa;
+	--green-color: #99e2d0;
+	--pink-color: #fcc0ce;
+	--light-gray-color: #eaeaea;
+  }
+  
+  /****** défilement fluide de la page html ***********/
+  html {
 	scroll-behavior: smooth;
-}
-/* icônes */
-.fa-solid .fa-heart{
-	color: violet ;
-	
-	
-}
-.fa-solid {
+  }
+  /* icônes */
+  .fa-solid .fa-heart {
+	color: violet;
+  }
+  .fa-solid {
 	width: 13.02px;
 	height: 19.9px;
 	top: 529.54px;
@@ -28,204 +26,172 @@ html {
 	gap: 10px;
 	opacity: 0px;
 	color: #9356dc;
-	margin:10px;
-	
-}
-
-/* picto input localisation  */
-.fa-solid.fa-location-dot {
+	margin: 10px;
+  }
+  
+  /* picto input localisation  */
+  .fa-solid.fa-location-dot {
 	padding: 16px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
-}
-/* picto rond  */
-.fa-rond {
+  }
+  /* picto rond  */
+  .fa-rond {
 	border: 1px solid var(--main-color);
-	border-radius: 50%;	
-}
-
-
-
-body {
+	border-radius: 50%;
+  }
+  
+  body {
 	display: flex;
 	justify-content: center;
 	margin: 0;
 	font-family: "Roboto", sans-serif;
-}
-
-a {
+  }
+  
+  a {
 	color: inherit;
 	text-decoration: none;
-}
-
-h1 {
-width: 275px;
-height: 68px;
-top: 152px;
-left: 42px;
-gap: 0px;
-opacity: 0px;
-
-font-family: Roboto;
-font-size: 24px;
-font-weight: 700;
-line-height: 28.13px;
-text-align: center;
-
-}
-
-.sous-titre {
-width: 315px;
-height: 46px;
-top: 220px;
-left: 34px;
-gap: 0px;
-opacity: 0px;
-margin:15px;
-
-
-font-family: Roboto;
-font-size: 18px;
-font-weight: 300;
-line-height: 21.09px;
-text-align: center;
-
-
-}
-
-
-h2{
-width: 275px;
-height: 31px;
-top: 448px;
-left: 20px;
-gap: 0px;
-opacity: 0px;
-
-
-font-family: Roboto;
-font-size: 24px;
-font-weight: 700;
-line-height: 28.13px;
-text-align: left;
-
-
-	
-
-}
-
-
-
-
-h3{
+  }
+  
+  h1 {
+	width: 275px;
+	height: 68px;
+	top: 152px;
+	left: 42px;
+	gap: 0px;
+	opacity: 0px;
+  
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28.13px;
+	text-align: center;
+  }
+  
+  .sous-titre {
+	width: 315px;
+	height: 46px;
+	top: 220px;
+	left: 34px;
+	gap: 0px;
+	opacity: 0px;
+	margin: 15px;
+  
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 21.09px;
+	text-align: center;
+  }
+  
+  h2 {
+	width: 275px;
+	height: 31px;
+	top: 448px;
+	left: 20px;
+	gap: 0px;
+	opacity: 0px;
+  
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28.13px;
+	text-align: left;
+  }
+  
+  h3 {
 	font-size: 18px;
 	margin: 0px;
 	display: block;
 	font-size: 18px;
 	font-weight: bold;
-}
-
-h4 {
-font-family: Roboto;
-font-size: 18px;
-font-weight: 700;
-line-height: 21.09px;
-text-align: left;
-}
-
-
-
-.section-title {
+  }
+  
+  h4 {
+	font-family: Roboto;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.09px;
+	text-align: left;
+  }
+  
+  .section-title {
 	margin: 0;
 	font-size: 22px;
-	
-}
-
-.main-container {
+  }
+  
+  .main-container {
 	width: 100%;
 	max-width: 1440px;
-	padding: 0;	
-}
-
-.card {
+	padding: 0;
+  }
+  
+  .card {
 	background-color: #f6f6f6;
 	border-radius: 20px;
 	padding: 0px;
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	min-width: 260px;
-	position:relative;
-
-	gap:70px;
+	position: relative;
+  
+	gap: 70px;
 	margin: 50px;
-
-}
-
-	@media screen and (max-width: 768px) {
-		.card {
-		  width: 340px; /* Définir la largeur de la carte */
-		  height: 251px; /* Définir la hauteur de la carte */
-		  margin: 0 auto 20px; /* Centrer la carte horizontalement et ajouter un espace en bas */
-		}
-	  }
-
-
-@media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 768px) {
 	.card {
-	  width: 100%; /* S'assurer que le texte occupe la largeur totale */
-	  text-align: center; /* Centrer le texte horizontalement */
-	  margin-top: 15px; /* Ajouter un peu d'espace en haut */
-	}}
-  
-
-
-
-.card img {
-	object-fit: cover;
-
-}
-
-@media screen and (max-width: 768px) {
-	.card img {
-	
-	
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		border-radius: 20px;
-		border-color: #000;
-	
+	  width: 340px;
+	  height: 251px;
+	  margin: 0 auto 20px;
 	}
-}
-
-.card h4 {
-	margin-bottom: 5px; /* Ajouter un peu d'espace en bas du titre */
-  } 
+  }
   
-
-.card div.nouveau-tag {
-
-	
-	border-radius:2px;
+  @media screen and (max-width: 768px) {
+	.card {
+	  width: 100%;
+	  text-align: center;
+	  margin-top: 15px;
+	}
+  }
+  
+  .card img {
+	object-fit: cover;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.card img {
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  border-radius: 20px;
+	  border-color: #000;
+	}
+  }
+  
+  .card h4 {
+	margin-bottom: 5px; /* Ajouter un peu d'espace en bas du titre */
+  }
+  
+  .card div.nouveau-tag {
+	border-radius: 2px;
 	background-color: var(--green-color);
-	color:green;
-	
+	color: green;
+  
 	display: inline;
 	padding: 6px;
 	position: absolute;
-	top:10px;
-	right:10px;
-
+	top: 10px;
+	right: 10px;
   }
-
-.card-content {
+  
+  .card-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding:2px;
-	
-}
-
-@media screen and (max-width: 768px) {
+	padding: 2px;
+  }
+  
+  @media screen and (max-width: 768px) {
 	.card-content {
 	  padding: 15px; /* Ajouter de l'espace à l'intérieur de card-content */
 	}
@@ -233,41 +199,38 @@ text-align: left;
 	.card-content h4 {
 	  margin: 0; /* Supprimer les marges par défaut */
 	  font-family: Roboto;
-font-size: 18px;
-font-weight: 700;
-line-height: 21.09px;
-text-align: left;
-
+	  font-size: 18px;
+	  font-weight: 700;
+	  line-height: 21.09px;
+	  text-align: left;
 	}
   
 	.card-content div {
 	  margin-bottom: 10px; /* Ajouter une marge inférieure de 5 pixels */
-
+  
 	  overflow: hidden; /* Empêcher le dépassement du contenu */
 	  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
 	  text-overflow: ellipsis; /* Ajouter des points de suspension si le texte dépasse */
-
-font-family: Roboto;
-font-size: 17px;
-font-weight: 300;
-line-height: 19.92px;
-text-align: left;
-
+  
+	  font-family: Roboto;
+	  font-size: 17px;
+	  font-weight: 300;
+	  line-height: 19.92px;
+	  text-align: left;
 	}
   }
   
-.euro {
+  .euro {
 	font-weight: 700;
-}
-
-.neutral-star {
-	color: var(--main-bg-color)
-}
-
-
-/* card-menu => page menu */
-
-.card-menu {
+  }
+  
+  .neutral-star {
+	color: var(--main-bg-color);
+  }
+  
+  /* card-menu => page menu */
+  
+  .card-menu {
 	background-color: white;
 	border-radius: 20px;
 	padding: 0px;
@@ -277,182 +240,159 @@ text-align: left;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap:30px;
-	margin:20px;
-	left:30px;
-	
-	
-}
-
-@media screen and (max-width: 768px) {
-	.card-menu{
-width: 335px;
-height: 72.38px;
-top: 505px;
-left: 20px;
-
-}}
-
-.card-menu ul {
-	position:relative;
+	gap: 30px;
+	margin: 20px;
+	left: 30px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.card-menu {
+	  width: 335px;
+	  height: 72.38px;
+	  top: 505px;
+	  left: 20px;
+	}
+  }
+  
+  .card-menu ul {
+	position: relative;
 	font-family: Roboto;
-font-size: 16px;
-font-weight: 500;
-line-height: 18.75px;
-text-align: left;
-
-	
-	
-}
-
-
-
-/* HEADER */
-
-header {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18.75px;
+	text-align: left;
+  }
+  
+  /* HEADER */
+  
+  header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-
-header .brand {
-	width:100%;
-	display:flex;
+  }
+  
+  header .brand {
+	width: 100%;
+	display: flex;
 	justify-content: center;
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-	z-index:100;
-
-}
-/* logo  */
-header img {
+	z-index: 100;
+  }
+  /* logo  */
+  header img {
 	height: 36x;
-	width:136px;
+	width: 136px;
 	margin: 30px 0;
 	align-items: center;
-	
-}
-header div.filter-search {
-	width:100%;
-	background-color:var(--light-gray-color);
+  }
+  header div.filter-search {
+	width: 100%;
+	background-color: var(--light-gray-color);
 	display: flex;
 	justify-content: center;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-}
-
-
-/* SECTION TWO */
-
-.section-two {
+  }
+  
+  /* SECTION TWO */
+  
+  .section-two {
 	background-color: #f6f6f6;
 	display: flex;
 	flex-direction: center;
 	align-items: center;
 	justify-content: center;
-	padding:30px;
-
-
-
-}
-
-.section-two-text {
-	display:flex;
+	padding: 30px;
+  }
+  
+  .section-two-text {
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-}
-
-.card-hero img{
-width:1024px;
-height:275px;
-margin:50px;
-
-}
-
-@media screen and (max-width: 768px) {
-	.card-hero img{
-		width:100%;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		border-color: #000;
-		margin:0px;
-	
-	}}
-
-	.filtre-menu {
-		display: flex;
-		flex-direction :column;
-		justify-content: center;
-		align-items: center;
-		gap:15px;
-		margin:10px;
-		
+  }
+  
+  .card-hero img {
+	width: 1024px;
+	height: 275px;
+	margin: 50px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.card-hero img {
+	  width: 100%;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  border-color: #000;
+	  margin: 0px;
 	}
-	
-	@media screen and (max-width: 768px) {
-		.filtre-menu {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width:100%;
-			
-		}}
-
-
-
-/* DIV : barre de recherche */
-.input-section {
+  }
+  
+  .filtre-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	margin: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.filtre-menu {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+  }
+  
+  /* DIV : barre de recherche */
+  .input-section {
 	display: flex;
 	border: 0;
-	height: 50px;	
-}
-
-@media screen and (max-width: 768px) {
+	height: 50px;
+  }
+  
+  @media screen and (max-width: 768px) {
 	.input-section {
-		justify-content: space-between;
-		
-	}}
-
-	.input-section-label .fa-solid.fa-location-dot {
-		color: black;
-
+	  justify-content: space-between;
 	}
-	
-/* bloc 1 Paris, Belleville de la barre de recherche */
-.input-section .input-section-field {
-	
+  }
+  
+  .input-section-label .fa-solid.fa-location-dot {
+	color: black;
+  }
+  
+  /* bloc 1 Paris, Belleville de la barre de recherche */
+  .input-section .input-section-field {
 	border: 1px solid var(--main-bg-color);
 	border-right: 0;
 	background-color: transparent;
-	
-}
-
-/* texte Paris, Belleville de la barre de recherche */
-.input-section-field::placeholder {
+  }
+  
+  /* texte Paris, Belleville de la barre de recherche */
+  .input-section-field::placeholder {
 	color: black;
 	font-weight: 700;
-	font-size: 1.125rem;/* 18px */
+	font-size: 1.125rem; /* 18px */
 	align-items: center;
 	justify-content: center;
-	
-}
-
-@media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 768px) {
 	.input-section-field [type="submit"] {
-		width: 100%;
-		justify-content: space-between;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		
+	  width: 100%;
+	  justify-content: space-between;
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
 	}
-}
-
-/* barre de recherche formulaire 1 */
-.input-section input[type="submit"] {
+  }
+  
+  /* barre de recherche formulaire 1 */
+  .input-section input[type="submit"] {
 	background-color: var(--main-color);
 	color: var(--white-color);
 	font-weight: 700;
@@ -463,188 +403,164 @@ margin:50px;
 	border-bottom-right-radius: 15px;
 	display: block;
 	height: 70px;
-	
-}
-
-@media screen and (max-width: 768px) {
+  }
+  
+  @media screen and (max-width: 768px) {
 	.input-section input[type="submit"] {
-		display: none;
-		justify-content: space-between;
-		margin: 0;
-		padding: 0;
-		width: 100%;
+	  display: none;
+	  justify-content: space-between;
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
 	}
-}
-
-
-.card-bouton  {
+  }
+  
+  .card-bouton {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+  
 	width: 218px;
 	height: 50px;
 	top: 293px;
 	left: 82px;
 	gap: 15px;
 	opacity: 0px;
-	
-
+  
 	border-radius: 20px;
-	background: rgb(147,86,220);
-	background: linear-gradient(0deg,rgba(147,86,220,1)0%, rgba(255,121,218,1)100%);
-	color:white;
-
-	
-font-family: Roboto;
-font-size: 16px;
-font-weight: 500;
-line-height: 18.75px;
-text-align: center;
-
-
-
-}
-@media screen and (max-width: 768px) {
+	background: rgb(147, 86, 220);
+	background: linear-gradient(
+	  0deg,
+	  rgba(147, 86, 220, 1) 0%,
+	  rgba(255, 121, 218, 1) 100%
+	);
+	color: white;
+  
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18.75px;
+	text-align: center;
+  }
+  @media screen and (max-width: 768px) {
 	.card-bouton {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	
-		width: 218px;
-		height: 50px;
-	
-		border-radius: 20px;
-	
-		
-	}}
-
-
-
-/****** RESTAURANTS ***********/
-/* DIV  (bouton 1, bouton 2, bouton 3, */ 
-/****** SECTION THREE ***********/
-.section-three .info-steps {
-	padding:50px;
-
-}
-@media screen and (max-width: 768px) {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+  
+	  width: 218px;
+	  height: 50px;
+  
+	  border-radius: 20px;
+	}
+  }
+  
+  /****** RESTAURANTS ***********/
+  /* DIV  (bouton 1, bouton 2, bouton 3, */
+  /****** SECTION THREE ***********/
+  .section-three .info-steps {
+	padding: 50px;
+  }
+  @media screen and (max-width: 768px) {
 	.section-three {
-		padding:20px;
-
-	}}
-
-
-.section-three #menu ul {
-padding: 0;
+	  padding: 20px;
+	}
+  }
+  
+  .section-three #menu ul {
+	padding: 0;
 	display: flex;
 	justify-content: center;
-}
-
-
-#menu ul .fa-solid {
+  }
+  
+  #menu ul .fa-solid {
 	margin-left: 0px;
-	text-align: left;	
-}
-
-/* DIV bulles ( bouton 1, bouton 2, bouton 3 ) */
-
-.filtre {
+	text-align: left;
+  }
+  
+  /* DIV bulles ( bouton 1, bouton 2, bouton 3 ) */
+  
+  .filtre {
 	display: flex;
 	align-items: center;
-	gap:15px;
-}
-
-@media screen and (max-width: 768px) {
+	gap: 15px;
+  }
+  
+  @media screen and (max-width: 768px) {
 	.filtre {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width:100%;
-		
-	}}
-
-
-
-/****** RESTAURANTS ***********/
-
-.restaurants section {
-    background-color: var(--secondary-main-bg-color);
-    padding: 50px;
-
-
-	
-}
-
-@media screen and (max-width: 768px) {
-.restaurants section {
-   
-    padding: 20px;
-	
-
-	
-}}
-
-
-
-.restaurants-cards {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	}
+  }
+  
+  /****** RESTAURANTS ***********/
+  
+  .restaurants section {
+	background-color: var(--secondary-main-bg-color);
+	padding: 50px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.restaurants section {
+	  padding: 20px;
+	}
+  }
+  
+  .restaurants-cards {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
-    justify-content: space-between;
-	gap:0px;
-
-	
-}
-
-@media screen and (min-width: 600px) {
-	.restaurants-cards {
-		grid-template-columns: repeat(2, 2fr);
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.restaurants-cards {
-		gap: 40px;
-	}
-}
-
-@media screen and (min-width: 1300px) {
-	.restaurants-cards {
-		gap: 60px;
-	}
-}
-
-
-.restaurants-cards .card img {
-    width: 100%;
-	height:200px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-@media screen and (max-width: 768px) {
-    .restaurants-cards .card img{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-       
-        border-radius: 15px 15px 0px 0;
-
-    }}
-
-/*.restaurants-cards .card-title {
-  margin: 20px 20px;
-}
-*/
-
-.restaurants-cards .card-rating {
-    margin-bottom: 5px;
-}
-
-
+	justify-content: space-between;
+	gap: 0px;
+  }
   
-body {
+  @media screen and (min-width: 600px) {
+	.restaurants-cards {
+	  grid-template-columns: repeat(2, 2fr);
+	}
+  }
+  
+  @media screen and (min-width: 1024px) {
+	.restaurants-cards {
+	  gap: 40px;
+	}
+  }
+  
+  @media screen and (min-width: 1300px) {
+	.restaurants-cards {
+	  gap: 60px;
+	}
+  }
+  
+  .restaurants-cards .card img {
+	width: 100%;
+	height: 200px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.restaurants-cards .card img {
+	  width: 100%;
+	  display: flex;
+	  flex-direction: column;
+  
+	  border-radius: 15px 15px 0px 0;
+	}
+  }
+  
+  /*.restaurants-cards .card-title {
+	margin: 20px 20px;
+  }
+  */
+  
+  .restaurants-cards .card-rating {
+	margin-bottom: 5px;
+  }
+  
+  body {
 	margin: 0;
 	font-family: Arial, sans-serif;
   }
@@ -663,163 +579,132 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap:20px;
+	gap: 20px;
   }
   
   .logo img {
-	width: 100px; /* Ajustez la largeur du logo selon vos besoins */
-	filter: invert(100%); /* Inverse les couleurs de l'image pour la rendre blanche */
+	width: 100px;
+	filter: invert(100%);
   }
   
-  
-/* Media Query pour les écrans de taille maximale de 768px (taille typique des smartphones) */
-@media (max-width: 768px) {
+  /* Media Query pour les écrans de taille maximale de 768px (taille typique des smartphones) */
+  @media (max-width: 768px) {
 	.footer-content {
-	  flex-direction: column; /* Change la direction en colonnes */
-	  text-align: left; /* Aligne le texte à gauche */
-	  margin-left: 0; /* Supprime la marge à gauche */
-	  margin-right: 0; /* Supprime la marge à droite */
+	  flex-direction: column;
+	  text-align: left;
+	  margin-left: 0;
+	  margin-right: 0;
 	}
   
 	.footer-section {
-	  margin-bottom: 10px; /* Ajoute un espace entre les sections */
-	  padding-left: 10px; /* Ajoute un espace à gauche */
-	  text-align: left; /* Aligne le texte à gauche dans la version mobile */
+	  margin-bottom: 10px;
+	  padding-left: 10px;
+	  text-align: left;
 	}
   }
   
   /* Media Query pour les écrans de taille minimale de 769px (grands écrans) */
   @media (min-width: 769px) {
 	.footer-content {
-	  align-items: flex-start; /* Aligne les éléments au début de la ligne */
-	  justify-content: flex-end; /* Aligne le contenu à droite */
-	  margin-right: 10px; /* Ajoute une marge à droite */
-	}	
-
-	.logo {
-	  order: 5; /* Définit l'ordre du logo après les autres éléments */
+	  align-items: flex-start;
+	  justify-content: flex-end;
+	  margin-right: 10px;
 	}
-  }	
   
-
-
-
-
-
-
-
-			.circle-button {
-				width: 14px;
-				height: 14px;
-				border-radius: 50%; /* Pour faire le bouton en forme de cercle */
-				
-				background-color: #9356dc; /* Couleur de fond */
-				color: #fff; /* Couleur du texte */
-				font-size: 14px;
-				font-weight: bold;
-				padding: 5px;
-
-				position:absolute;
-				left:-12px;
-				display: flex;
-				justify-content: center;
-
-	
-			  }
-
-			  
-
-
-			  .click-button {
-				
-					width: 60px;
-					height: 73px;
-					border-radius: 0px 15px 15px 0px;
-					background-color: var(--green-color);
-					border-color: transparent;
-					font-size: 24px;
-					font-weight: bold;
-					cursor: pointer;
-					outline: none; /* Supprime la bordure lorsqu'on clique sur le bouton */
-				  }
-				  .click-button .fa-solid .fa-check {
-					background-color:white;
-					border-radius:50%;
-
-				  }
-
-
-			 .small-line {
-			width: 40px;
-			height: 3px;
-			
-			background-color:var(--green-color);
-			
-
-			 }
-
-			 	/* TENTATIVES RADIO BOUTON A CRÉER */
-			  
-
-				 input[type="radio"] {
-					display: none;
-					
-					
-				}
-				
-				.radio-button-container {
-					position: relative;
-					display: inline-block;
-					margin:20px;
-				
-				
-					
-				}
-				
-				input[type="radio"] + label {
-					display: inline-block;
-					width: 375px;
-					height: 73px;
-					line-height: 73px;
-					background-color: #f6f6f6;
-				
-					box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-					min-width: 260px;
-					
-				
-				
-					padding: 0 20px;
-					cursor: pointer;
-					text-align: center;
-					
-				}
-				
-				input[type="radio"]:checked + label {
-					background-color:#f6f6f6;
-					color: black;
-					width:60px;
-					height:73px;
-					right:300px;
-				
-				}
-				
-				.confirm-button {
-					position: absolute;
-					width:60px;
-					height:73px;
-					
-				
-				
-					padding: 10px 20px;
-					border: none;
-					background-color:var(--green-color);
-				
-					border-radius: 0 5px 5px 0;
-					cursor: pointer;
-					
-				}
-				
-				.confirm-button:hover {
-					background-color: var(--green-color);
-					
-				}
+	.logo {
+	  order: 5;
+	}
+  }
+  
+  .circle-button {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+  
+	background-color: #9356dc;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+  
+	position: absolute;
+	left: -12px;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .click-button {
+	width: 60px;
+	height: 73px;
+	border-radius: 0px 15px 15px 0px;
+	background-color: var(--green-color);
+	border-color: transparent;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	outline: none;
+  }
+  .click-button .fa-solid .fa-check {
+	background-color: white;
+	border-radius: 50%;
+  }
+  
+  .small-line {
+	width: 40px;
+	height: 3px;
+  
+	background-color: var(--green-color);
+  }
+  
+  /* TENTATIVES RADIO BOUTON A CRÉER */
+  
+  input[type="radio"] {
+	display: none;
+  }
+  
+  .radio-button-container {
+	position: relative;
+	display: inline-block;
+	margin: 20px;
+  }
+  
+  input[type="radio"] + label {
+	display: inline-block;
+	width: 375px;
+	height: 73px;
+	line-height: 73px;
+	background-color: #f6f6f6;
+  
+	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+	min-width: 260px;
+  
+	padding: 0 20px;
+	cursor: pointer;
+	text-align: center;
+  }
+  
+  input[type="radio"]:checked + label {
+	background-color: #f6f6f6;
+	color: black;
+	width: 60px;
+	height: 73px;
+	right: 300px;
+  }
+  
+  .confirm-button {
+	position: absolute;
+	width: 60px;
+	height: 73px;
+  
+	padding: 10px 20px;
+	border: none;
+	background-color: var(--green-color);
+  
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+  }
+  
+  .confirm-button:hover {
+	background-color: var(--green-color);
+  }
+  
