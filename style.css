@@ -19,11 +19,7 @@
 	color: violet;
   }
   .fa-solid {
-	width: 13.02px;
-	height: 19.9px;
-	top: 529.54px;
-	left: 65.98px;
-	gap: 10px;
+
 	opacity: 0px;
 	color: #9356dc;
 	margin: 10px;
@@ -141,7 +137,7 @@
   @media screen and (max-width: 768px) {
 	.card {
 	  width: 340px;
-	  height: 251px;
+	
 	  margin: 0 auto 20px;
 	}
   }
@@ -206,8 +202,7 @@
 	}
   
 	.card-content div {
-	  margin-bottom: 10px; /* Ajouter une marge inférieure de 5 pixels */
-  
+	  
 	  overflow: hidden; /* Empêcher le dépassement du contenu */
 	  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
 	  text-overflow: ellipsis; /* Ajouter des points de suspension si le texte dépasse */
@@ -513,7 +508,7 @@
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	justify-content: space-between;
-	gap: 0px;
+	gap: 20px;
   }
   
   @media screen and (min-width: 600px) {
@@ -619,6 +614,9 @@
   .circle-button {
 	width: 14px;
 	height: 14px;
+	top:calc(50%-12px);
+	
+	line-height: 14px;;
 	border-radius: 50%;
   
 	background-color: #9356dc;
@@ -656,55 +654,124 @@
 	background-color: var(--green-color);
   }
   
-  /* TENTATIVES RADIO BOUTON A CRÉER */
+  /* style page menu */
   
-  input[type="radio"] {
-	display: none;
-  }
-  
-  .radio-button-container {
-	position: relative;
-	display: inline-block;
-	margin: 20px;
-  }
-  
-  input[type="radio"] + label {
-	display: inline-block;
+  .option {
 	width: 375px;
 	height: 73px;
-	line-height: 73px;
-	background-color: #f6f6f6;
-  
-	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
-	min-width: 260px;
-  
-	padding: 0 20px;
-	cursor: pointer;
-	text-align: center;
+	position: relative;
+	background-color: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	display: flex; /* Pour aligner les éléments horizontalement */
+	justify-content: space-between; /* Pour espacer les éléments de façon égale */
+	align-items: center; /* Pour aligner verticalement les éléments */
   }
   
-  input[type="radio"]:checked + label {
-	background-color: #f6f6f6;
-	color: black;
-	width: 60px;
-	height: 73px;
-	right: 300px;
+  .subtitle {
+	font-size: 14px;
+	color: #666666;
   }
   
-  .confirm-button {
-	position: absolute;
-	width: 60px;
-	height: 73px;
-  
-	padding: 10px 20px;
-	border: none;
-	background-color: var(--green-color);
-  
-	border-radius: 0 5px 5px 0;
-	cursor: pointer;
+  .price {
+	font-size: 14px;
+	color: #000;
+	padding-right: 10px; /* Espacement entre le prix et le bord droit */
   }
   
-  .confirm-button:hover {
-	background-color: var(--green-color);
-  }
-  
+
+/* travail sur l'image du header */
+
+  body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo-container {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px; /* Ajustez la taille de votre logo selon vos besoins */
+    height: auto;
+    vertical-align: middle;
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+.main {
+    text-align: center;
+}
+
+.adaptive-image {
+    width: 100%; /* La largeur de l'image prendra toute la largeur du conteneur */
+    max-width: 375px; /* Limite de largeur sur les petits écrans */
+    height: auto;
+    max-height: 383px; /* Limite de hauteur sur les grands écrans */
+}
+
+
+/* Styles pour la section des entrées, plats et desserts */
+.menu-section {
+    background-color: #f2f2f2; /* Cadre gris clair */
+    width: 1055px; /* Dimensions pour les grands écrans */
+    height: 1221px;
+    top: 439px;
+    left: 193px;
+    gap: 0px;
+    opacity: 0px;
+    margin: 20px auto; /* Centrage horizontal */
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+/* Styles pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .menu-section {
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        opacity: 1;
+    }
+}
+/* Styles pour la section des entrées, plats et desserts */
+.menu-section {
+    background-color: #f2f2f2; /* Cadre gris clair */
+    width: 1055px; /* Dimensions pour les grands écrans */
+    height: 1221px;
+    top: 439px;
+    left: 193px;
+    gap: 0px;
+    opacity: 0px;
+    margin: 20px auto; /* Centrage horizontal */
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+/* Styles pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .menu-section {
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        opacity: 1;
+    }
+}
