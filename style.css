@@ -22,7 +22,7 @@
 
 	opacity: 0px;
 	color: #9356dc;
-	margin: 10px;
+
   }
   
   /* picto input localisation  */
@@ -184,36 +184,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2px;
+	padding: 15px;
   }
   
   @media screen and (max-width: 768px) {
-	.card-content {
-	  padding: 15px; /* Ajouter de l'espace à l'intérieur de card-content */
-	}
-  
 	.card-content h4 {
 	  margin: 0; /* Supprimer les marges par défaut */
-	  font-family: Roboto;
-	  font-size: 18px;
-	  font-weight: 700;
-	  line-height: 21.09px;
-	  text-align: left;
-	}
+	}}
   
-	.card-content div {
-	  
-	  overflow: hidden; /* Empêcher le dépassement du contenu */
-	  white-space: nowrap; /* Empêcher le texte de passer à la ligne */
-	  text-overflow: ellipsis; /* Ajouter des points de suspension si le texte dépasse */
-  
-	  font-family: Roboto;
-	  font-size: 17px;
-	  font-weight: 300;
-	  line-height: 19.92px;
-	  text-align: left;
-	}
-  }
+	
   
   .euro {
 	font-weight: 700;
@@ -545,11 +524,7 @@
 	  border-radius: 15px 15px 0px 0;
 	}
   }
-  
-  /*.restaurants-cards .card-title {
-	margin: 20px 20px;
-  }
-  */
+ 
   
   .restaurants-cards .card-rating {
 	margin-bottom: 5px;
@@ -614,7 +589,7 @@
   .circle-button {
 	width: 14px;
 	height: 14px;
-	top:calc(50%-12px);
+	top:calc(50% - 12px);
 	
 	line-height: 14px;;
 	border-radius: 50%;
@@ -664,9 +639,9 @@
 	border: 2px solid #000000;
 	border-radius: 5px;
 	margin-bottom: 10px;
-	display: flex; /* Pour aligner les éléments horizontalement */
-	justify-content: space-between; /* Pour espacer les éléments de façon égale */
-	align-items: center; /* Pour aligner verticalement les éléments */
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
   }
   
   .subtitle {
@@ -677,7 +652,7 @@
   .price {
 	font-size: 14px;
 	color: #000;
-	padding-right: 10px; /* Espacement entre le prix et le bord droit */
+	padding-right: 10px; 
   }
   
 
@@ -698,7 +673,7 @@ header {
 }
 
 .logo {
-    width: 100px; /* Ajustez la taille de votre logo selon vos besoins */
+    width: 100px; 
     height: auto;
     vertical-align: middle;
 }
@@ -712,23 +687,22 @@ header {
 }
 
 .adaptive-image {
-    width: 100%; /* La largeur de l'image prendra toute la largeur du conteneur */
-    max-width: 375px; /* Limite de largeur sur les petits écrans */
-    height: auto;
-    max-height: 383px; /* Limite de hauteur sur les grands écrans */
+    width: 100%; 
+    max-width: 375px; 
+    max-height: 383px; 
 }
 
 
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
-    background-color: #f2f2f2; /* Cadre gris clair */
-    width: 1055px; /* Dimensions pour les grands écrans */
+    background-color: #f2f2f2; 
+    width: 1055px; 
     height: 1221px;
     top: 439px;
     left: 193px;
     gap: 0px;
     opacity: 0px;
-    margin: 20px auto; /* Centrage horizontal */
+    margin: 20px auto; 
     padding: 20px;
     text-align: center;
 }
@@ -749,14 +723,14 @@ header {
 }
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
-    background-color: #f2f2f2; /* Cadre gris clair */
-    width: 1055px; /* Dimensions pour les grands écrans */
+    background-color: #f2f2f2; 
+    width: 1055px; 
     height: 1221px;
     top: 439px;
     left: 193px;
     gap: 0px;
     opacity: 0px;
-    margin: 20px auto; /* Centrage horizontal */
+    margin: 20px auto; 
     padding: 20px;
     text-align: center;
 }
