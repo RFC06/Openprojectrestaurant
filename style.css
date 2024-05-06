@@ -670,6 +670,7 @@ header {
 
 .logo-container {
     text-decoration: none;
+
 }
 
 .logo {
@@ -680,22 +681,31 @@ header {
 
 .arrow {
     font-size: 24px;
+
 }
 
 .main {
     text-align: center;
+	
 }
 
 .adaptive-image {
     width: 100%; 
     max-width: 375px; 
     max-height: 383px; 
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	
+
 }
 
 
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
-    background-color: #f2f2f2; 
+    background-color:var(--light-gray-color); 
     width: 1055px; 
     height: 1221px;
     top: 439px;
@@ -705,6 +715,12 @@ header {
     margin: 20px auto; 
     padding: 20px;
     text-align: center;
+	display: flex;
+ flex-direction: column;
+    align-items: center;
+	border-radius:20px 20px;
+   
+	
 }
 
 .section-title {
@@ -733,6 +749,10 @@ header {
     margin: 20px auto; 
     padding: 20px;
     text-align: center;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .section-title {
@@ -748,4 +768,15 @@ header {
         left: auto;
         opacity: 1;
     }
+}
+
+
+.submit-button {
+    width: 50px;
+    height: 73px;
+	
+    background-color: var(--green-color);
+    cursor: pointer;
+    align-self: flex-end; /* Place le bouton tout à droite */
+    margin-top: 20px; /* Espacement du bouton par rapport aux autres éléments */
 }
