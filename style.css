@@ -129,24 +129,15 @@
 	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
 	min-width: 260px;
 	position: relative;
+	margin:0px;
   
-	gap: 70px;
-	margin: 50px;
-  }
-  
-  @media screen and (max-width: 768px) {
-	.card {
-	  width: 340px;
 	
-	  margin: 0 auto 20px;
-	}
   }
   
   @media screen and (max-width: 768px) {
 	.card {
 	  width: 100%;
-	  text-align: center;
-	  margin-top: 15px;
+	  margin: 0 auto 20px;
 	}
   }
   
@@ -243,8 +234,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
+    padding: 0px 0;
   }
-  
+
   header .brand {
 	width: 100%;
 	display: flex;
@@ -473,8 +466,9 @@
   /****** RESTAURANTS ***********/
   
   .restaurants section {
-	background-color: var(--secondary-main-bg-color);
+	background-color: var(--light-gray-color);
 	padding: 50px;
+
   }
   
   @media screen and (max-width: 768px) {
@@ -548,10 +542,17 @@
   .footer-content {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	
 	gap: 20px;
   }
   
+  @media screen and (min-width: 768px) {
+	.footer-menu {
+		display:flex;
+		gap:20px;
+
+	}}
+
   .logo img {
 	width: 100px;
 	filter: invert(100%);
@@ -568,7 +569,7 @@
   
 	.footer-section {
 	  margin-bottom: 10px;
-	  padding-left: 10px;
+	 
 	  text-align: left;
 	}
   }
@@ -663,10 +664,6 @@
     padding: 0;
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
-}
 
 .logo-container {
     text-decoration: none;
