@@ -777,3 +777,32 @@
     align-self: flex-end; /* Place le bouton tout à droite */
     margin-top: 20px; /* Espacement du bouton par rapport aux autres éléments */
 }
+
+.tmp-label{
+	flex-grow: 1;
+}
+
+.tmp-input {
+	display:none;
+
+}
+
+.tmp-rectangle {
+	display:flex;
+	width:100%;
+}
+
+.tmp-rectangle:hover .tmp-check{
+	display:block;
+
+}
+
+.tmp-check {
+	display:none;
+
+}
+
+.tmp-label:has(.tmp-input:checked)~.tmp-check{
+	display: block;
+
+}
