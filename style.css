@@ -38,10 +38,9 @@
   }
   
   body {
-	display: flex;
-	justify-content: center;
 	margin: 0;
-	font-family: "Roboto", sans-serif;
+    padding: 0;
+    height: 100%;
   }
   
   a {
@@ -253,6 +252,24 @@
 	margin: 30px 0;
 	align-items: center;
   }
+
+  .adaptive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query pour les écrans larges */
+@media (min-width: 1440px) {
+    .adaptive-image {
+        max-width: 1440px; /* Limite la largeur de l'image à 1440px */
+        height: 383px; /* Hauteur spécifique pour les grands écrans */
+        position: absolute; /* Pour positionner l'image */
+        top: 96px; /* Distance par rapport au haut de la page */
+        left: 50%; /* Pour centrer l'image horizontalement */
+        transform: translateX(-50%); /* Pour centrer l'image horizontalement */
+    }
+}
+
   
   header div.filter-search {
 	width: 100%;
@@ -279,23 +296,6 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-  }
-  
-  .card-hero img {
-	width: 1024px;
-	height: 275px;
-	margin: 50px;
-  }
-  
-  @media screen and (max-width: 768px) {
-	.card-hero img {
-	  width: 100%;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	  border-color: #000;
-	  margin: 0px;
-	}
   }
   
   .filtre-menu {
@@ -585,66 +585,47 @@
   
 	.logo {
 	  order: 5;
-	}
-  }
+	}}
   
   .circle-button {
 	width: 14px;
 	height: 14px;
 	top:calc(50% - 12px);
-	
 	line-height: 14px;;
 	border-radius: 50%;
-  
 	background-color: #9356dc;
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
 	padding: 5px;
-  
 	position: absolute;
 	left: -12px;
 	display: flex;
 	justify-content: center;
   }
   
-  .click-button {
-	width: 60px;
-	height: 73px;
-	border-radius: 0px 15px 15px 0px;
-	background-color: var(--green-color);
-	border-color: transparent;
-	font-size: 24px;
-	font-weight: bold;
-	cursor: pointer;
-	outline: none;
-  }
-  .click-button .fa-solid .fa-check {
-	background-color: white;
-	border-radius: 50%;
-  }
   
   .small-line {
 	width: 40px;
 	height: 3px;
-  
 	background-color: var(--green-color);
   }
   
   /* style page menu */
-  
+   /* rectangle choix : entrée, plats, desserts */ 
   .option {
 	width: 375px;
 	height: 73px;
 	position: relative;
 	background-color: #ffffff;
 	border-color: transparent;
-	
 	border-radius: 5px;
 	margin-bottom: 10px;
 	display: flex; 
 	justify-content: space-between; 
 	align-items: center; 
+	padding:5px;
+
   }
   
   .subtitle {
@@ -665,38 +646,23 @@
     width: 1440px;
     height: 383px;
     object-fit: cover; /* pour garder les proportions de l'image sans déformation */
-    margin-top: 96px; /* positionner l'image 96px du haut de la page */
+    /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
+
 }
+@media (max-width: 768px) {
+	.header-image{
+    width: 100%;
+    height: 383px;
+
+}}
+/* en tête avec flèche et logo */
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+	gap:0px;
 }
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
 
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
@@ -711,16 +677,10 @@ header {
     padding: 20px;
     text-align: center;
 	display: flex;
- flex-direction: column;
+	flex-direction: column;
     align-items: center;
 	justify-content: center;
-	border-radius:20px 20px;
-   border:solid;
-	
-}
-
-.section-title {
-    margin-bottom: 20px;
+	border-radius:20px 20px 0 0;
 }
 
 /* Styles pour les petits écrans */
@@ -731,92 +691,65 @@ header {
         top: auto;
         left: auto;
         opacity: 1;
-    }
-}
-/* Styles pour la section des entrées, plats et desserts */
-.menu-section {
-    background-color: #f2f2f2; 
-    width: 1055px; 
-    height: 1221px;
-    top: 439px;
-    left: 193px;
-    gap: 0px;
-    opacity: 0px;
-    margin: 20px auto; 
-    padding: 20px;
-    text-align: center;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
+    }}
+/* logo et titre du menu */
 .section-title {
     margin-bottom: 20px;
 }
 
-/* Styles pour les petits écrans */
-@media screen and (max-width: 768px) {
-    .menu-section {
-        width: auto;
-        height: auto;
-        top: auto;
-        left: auto;
-        opacity: 1;
-    }
-}
-
-
-
+/* bouton vert qui apparaît au survol */
 .submit-button {
     width: 50px;
     height: 73px;
-	
     background-color: var(--green-color);
     cursor: pointer;
     align-self: flex-end; /* Place le bouton tout à droite */
     margin-top: 20px; /* Espacement du bouton par rapport aux autres éléments */
+
 }
 
+/* choix du rectangle sans le bouton vert */
 .tmp-label{
 	flex-grow: 1;
-}
-
-.tmp-input {
-	display:none;
-
-}
-
-.tmp-rectangle {
-	display:flex;
-	width:100%;
 	
 }
 
+/* validation du choix bouton rond transparent */
+.tmp-input {
+	display:none;
+}
+
+/* choix du rectangle avec le bouton vert */
+.tmp-rectangle {
+	display:flex;
+	width:100%;	
+}
+
+/* bouton de validation vert qui apparaît au survol */
 .tmp-rectangle:hover .tmp-check{
 	display:block;
 	width:50px;
 	height:72px;
 	background-color: #99e2d0;
 	border-radius:0px 5px 5px 0px;
-	
-
+	border:solid;
 }
 
+/* icône font awesome check qui apparaît au survol */
 .tmp-check {
 	display:none;
-
 }
-
+/* bouton de validation vert qui apparaît au survol et icône font awesome check qui apparaît au survol */
 .tmp-label:has(.tmp-input:checked)~.tmp-check{
 	display: block;
-
 }
-
 
 /* CSS pour aligner les textes à gauche */
 .tmp-label {
 	text-align: left;
   }
 
-  
+  .form
+  {
+	display:none ;
+  }
