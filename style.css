@@ -10,7 +10,7 @@
 	--light-gray-color: #eaeaea;
   }
   
-  /****** défilement fluide de la page html ***********/
+  /****** défilement fluide de la page html *****/
   html {
 	scroll-behavior: smooth;
   }
@@ -155,7 +155,7 @@
   }
   
   .card h4 {
-	margin-bottom: 5px; /* Ajouter un peu d'espace en bas du titre */
+	margin-bottom: 5px; 
   }
   
   .card div.nouveau-tag {
@@ -179,7 +179,7 @@
   
   @media screen and (max-width: 768px) {
 	.card-content h4 {
-	  margin: 0; /* Supprimer les marges par défaut */
+	  margin: 0; 
 	}}
   
 	
@@ -261,12 +261,12 @@
 /* Media query pour les écrans larges */
 @media (min-width: 1440px) {
     .adaptive-image {
-        max-width: 1440px; /* Limite la largeur de l'image à 1440px */
-        height: 383px; /* Hauteur spécifique pour les grands écrans */
-        position: absolute; /* Pour positionner l'image */
-        top: 96px; /* Distance par rapport au haut de la page */
-        left: 50%; /* Pour centrer l'image horizontalement */
-        transform: translateX(-50%); /* Pour centrer l'image horizontalement */
+        max-width: 1440px; 
+        height: 383px; 
+        position: absolute; 
+        top: 96px;
+        left: 50%; 
+        transform: translateX(-50%); 
     }
 }
 
@@ -645,7 +645,7 @@
 .header-image {
     width: 1440px;
     height: 383px;
-    object-fit: cover; /* pour garder les proportions de l'image sans déformation */
+    object-fit: cover; 
     /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
 
 }
@@ -703,9 +703,8 @@ header {
     height: 73px;
     background-color: var(--green-color);
     cursor: pointer;
-    align-self: flex-end; /* Place le bouton tout à droite */
-    margin-top: 20px; /* Espacement du bouton par rapport aux autres éléments */
-
+    align-self: flex-end; 
+    margin-top: 20px; 
 }
 
 /* choix du rectangle sans le bouton vert */
@@ -747,9 +746,4 @@ header {
 /* CSS pour aligner les textes à gauche */
 .tmp-label {
 	text-align: left;
-  }
-
-  .form
-  {
-	display:none ;
   }
