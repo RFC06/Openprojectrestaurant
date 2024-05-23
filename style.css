@@ -470,7 +470,7 @@
   .restaurants section {
 	background-color: var(--light-gray-color);
 	padding: 50px;
-	border: solid;
+
 
 
   }
@@ -614,7 +614,7 @@
   /* style page menu */
    /* rectangle choix : entrée, plats, desserts */ 
   .option {
-	width: 375px;
+	
 	height: 73px;
 	position: relative;
 	background-color: #ffffff;
@@ -643,18 +643,13 @@
 /* travail sur l'image du header */
 
 .header-image {
-    width: 1440px;
+    width:100%;
     height: 383px;
     object-fit: cover; 
     /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
 
 }
-@media (max-width: 768px) {
-	.header-image{
-    width: 100%;
-    height: 383px;
 
-}}
 /* en tête avec flèche et logo */
 header {
     display: flex;
@@ -667,11 +662,8 @@ header {
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
     background-color:var(--light-gray-color); 
-    width: 1055px; 
-    height: 1221px;
-    top: 439px;
-    left: 193px;
     gap: 0px;
+	padding: 0;
     opacity: 0px;
     margin: 20px auto; 
     padding: 20px;
@@ -722,6 +714,7 @@ header {
 .tmp-rectangle {
 	display:flex;
 	width:100%;	
+	W24
 }
 
 /* bouton de validation vert qui apparaît au survol */
@@ -747,3 +740,29 @@ header {
 .tmp-label {
 	text-align: left;
   }
+
+  fieldset{
+	border: none;
+  }
+.menu-items {
+	width:100%;
+
+}
+
+
+#restaurant-page-header{
+position:relative;
+
+}
+
+.arrow-container {
+	position:absolute;
+	left:17px;
+	top:calc(50% - 10px);
+
+}
+
+.arrow {
+	line-height:20px;
+
+}
