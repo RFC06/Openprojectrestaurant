@@ -662,7 +662,6 @@
     object-fit: cover; 
     /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
 	position:absolute;
-	
 
 }
 
@@ -745,9 +744,18 @@ header {
 /* choix du rectangle avec le bouton vert */
 .tmp-rectangle {
 	display:flex;
-	width:100%;	
 	
+	width:490px;	
 }
+
+@media screen and (max-width: 768px) {
+   
+.tmp-rectangle {
+	display:flex;
+	width:100%;	
+}}
+
+
 
 /* bouton de validation vert qui apparaît au survol */
 .tmp-rectangle:hover .tmp-check{
@@ -756,7 +764,7 @@ header {
 	height:72px;
 	background-color: #99e2d0;
 	border-radius:0px 5px 5px 0px;
-	border:solid;
+	
 }
 
 /* icône font awesome check qui apparaît au survol */
