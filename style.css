@@ -41,7 +41,9 @@
 	margin: 0;
     padding: 0;
     height: 100%;
-  }
+	font-family: 'Roboto', sans-serif;
+	}
+  
   
   a {
 	color: inherit;
@@ -805,6 +807,19 @@ position:relative;
 .arrow {
 	line-height:20px;
 
+}
+
+/* positionnement du coeur à côté de la palette du goût*/
+
+.section-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap :20px;
+}
+
+.section-title {
+	margin: 0;
 }
 
 
