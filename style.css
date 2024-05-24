@@ -207,6 +207,7 @@
 	gap: 30px;
 	margin: 20px;
 	left: 30px;
+	
   }
   
   @media screen and (max-width: 768px) {
@@ -253,10 +254,6 @@
 	align-items: center;
   }
 
-  .adaptive-image {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Media query pour les écrans larges */
 @media (min-width: 1440px) {
@@ -305,6 +302,7 @@
 	align-items: center;
 	gap: 15px;
 	margin: 10px;
+	
   }
   
   @media screen and (max-width: 768px) {
@@ -314,6 +312,7 @@
 	  justify-content: center;
 	  align-items: center;
 	  width: 100%;
+	  
 	}
   }
   
@@ -322,6 +321,7 @@
 	display: flex;
 	border: 0;
 	height: 50px;
+	
   }
   
   @media screen and (max-width: 768px) {
@@ -372,6 +372,7 @@
 	border-bottom-right-radius: 15px;
 	display: block;
 	height: 70px;
+	border:solid;
   }
   
   @media screen and (max-width: 768px) {
@@ -421,6 +422,7 @@
 	  height: 50px;
   
 	  border-radius: 20px;
+	  
 	}
   }
   
@@ -613,21 +615,33 @@
   
   /* style page menu */
    /* rectangle choix : entrée, plats, desserts */ 
-  .option {
-	
+ 
+
+   .option {
 	height: 73px;
 	position: relative;
 	background-color: #ffffff;
 	border-color: transparent;
 	border-radius: 5px;
 	margin-bottom: 10px;
-	display: flex; 
-	justify-content: space-between; 
-	align-items: center; 
-	padding:5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
 
-  }
-  
+@media (min-width: 769px) {
+	.option {
+		width: 340px;
+		margin: 10px auto; /* Centrer horizontalement */
+		gap:5px;
+	
+	}
+}
+.option:active{display: block;
+
+}
+
   .subtitle {
 	font-size: 14px;
 	color: #666666;
@@ -647,6 +661,8 @@
     height: 383px;
     object-fit: cover; 
     /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
+	position:absolute;
+	
 
 }
 
@@ -659,13 +675,17 @@ header {
 	gap:0px;
 }
 
+
+
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
     background-color:var(--light-gray-color); 
     gap: 0px;
 	padding: 0;
     opacity: 0px;
-    margin: 20px auto; 
+    margin: 150px; 
+	margin-top: 100px; /* Réduisez la marge supérieure */
+    margin-bottom: 50px; /* Augmentez la marge inférieure */
     padding: 20px;
     text-align: center;
 	display: flex;
@@ -673,6 +693,9 @@ header {
     align-items: center;
 	justify-content: center;
 	border-radius:20px 20px 0 0;
+	position: relative; /* Positionnement relatif pour déplacer la section par rapport à son conteneur */
+    top: 300px; /* Décalage vers le haut */
+
 }
 
 /* Styles pour les petits écrans */
@@ -683,7 +706,16 @@ header {
         top: auto;
         left: auto;
         opacity: 1;
+		margin:0;
     }}
+
+
+
+	.adaptive-image {
+		max-width: 100%;
+		height: auto;
+		
+	}
 /* logo et titre du menu */
 .section-title {
     margin-bottom: 20px;
@@ -714,7 +746,7 @@ header {
 .tmp-rectangle {
 	display:flex;
 	width:100%;	
-	W24
+	
 }
 
 /* bouton de validation vert qui apparaît au survol */
@@ -766,3 +798,6 @@ position:relative;
 	line-height:20px;
 
 }
+
+
+
