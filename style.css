@@ -404,29 +404,25 @@
 	background: linear-gradient(
 	  0deg,
 	  rgba(147, 86, 220, 1) 0%,
-	  rgba(255, 121, 218, 1) 100%
-	);
+	  rgba(255, 121, 218, 1) 100%	);
 	color: white;
-  
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 18.75px;
 	text-align: center;
   }
+
   @media screen and (max-width: 768px) {
 	.card-bouton {
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
-  
 	  width: 218px;
 	  height: 50px;
-  
 	  border-radius: 20px;
 	  
-	}
-  }
+	}}
   
   /****** RESTAURANTS ***********/
   /* DIV  (bouton 1, bouton 2, bouton 3, */
@@ -814,7 +810,7 @@ position:relative;
 .section-container {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: left;
 	gap :20px;
 }
 
@@ -822,5 +818,71 @@ position:relative;
 	margin: 0;
 }
 
+.title-menu {
+	margin-right: 10px; /* Ajustez la marge selon vos besoins */
+	
+}
+.title-menu-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* Pour aligner à gauche */
+}
+.small-line {
+	width: 40px;
+	height: 4px;
+	background-color: green;
+	margin-top: 2px;
+
+}
+.section-title {
+	margin: 0;
+	margin-left: auto; /* Pousse le titre à droite */
+}
+
+.icon-container {
+	margin-left: 0; /* Ajustez la marge selon vos besoins */
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px 0; /* Ajoutez du padding si nécessaire */
+	border-bottom: 1px solid #ddd; /* Optionnel, pour séparer les items */
+}
+
+.submit-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	opacity: 1; /* Assurez-vous que l'opacité est réglée sur 1 pour rendre le bouton visible */
+}
+
+.submit-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 218px;
+	height: 50px;
+	
+	border-radius: 20px;
+	background: rgb(147, 86, 220);
+	background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+	color: white;
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 18.75px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+}
+
+.submit-button:hover {
+	opacity: 0.8; /* Change l'opacité au survol pour un effet visuel */
+}
 
 
