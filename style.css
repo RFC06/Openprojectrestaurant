@@ -254,6 +254,7 @@
 	width: 136px;
 	margin: 30px 0;
 	align-items: center;
+	position:static;
   }
 
 
@@ -658,8 +659,8 @@
     width:100%;
     height: 383px;
     object-fit: cover; 
-    /* margin-top: 0px; /* positionner l'image 96px du haut de la page */
-	position:absolute;
+    /* margin-top: 0px; /*  */
+	position:static;
 
 }
 
@@ -678,11 +679,13 @@ header {
 .menu-section {
     background-color:var(--light-gray-color); 
     gap: 0px;
-	padding: 0;
+
     opacity: 0px;
-    margin: 150px; 
-	margin-top: 100px; /* Réduisez la marge supérieure */
-    margin-bottom: 50px; /* Augmentez la marge inférieure */
+	position:relative;
+
+ 
+	margin-top: 0; /*  */
+    margin-bottom: 0; /*  */
     padding: 20px;
     text-align: center;
 	display: flex;
@@ -690,8 +693,7 @@ header {
     align-items: center;
 	justify-content: center;
 	border-radius:20px 20px 0 0;
-	position: relative; /* Positionnement relatif pour déplacer la section par rapport à son conteneur */
-    top: 300px; /* Décalage vers le haut */
+    top: -96px; /* Décalage vers le haut */
 
 }
 
@@ -729,56 +731,58 @@ header {
 }
 
 /* choix du rectangle sans le bouton vert */
-.tmp-label{
-	flex-grow: 1;
-	
-}
-
-/* validation du choix bouton rond transparent */
-.tmp-input {
-	display:none;
-}
-
-/* choix du rectangle avec le bouton vert */
-.tmp-rectangle {
-	display:flex;
-	
-	width:490px;	
-}
-
-@media screen and (max-width: 768px) {
-   
-.tmp-rectangle {
-	display:flex;
-	width:100%;	
-}}
-
-
-
-/* bouton de validation vert qui apparaît au survol */
-.tmp-rectangle:hover .tmp-check{
-	display:block;
-	width:50px;
-	height:72px;
-	background-color: #99e2d0;
-	border-radius:0px 5px 5px 0px;
-	
-}
-
-/* icône font awesome check qui apparaît au survol */
-.tmp-check {
-	display:none;
-}
-/* bouton de validation vert qui apparaît au survol et icône font awesome check qui apparaît au survol */
-.tmp-label:has(.tmp-input:checked)~.tmp-check{
-	display: block;
-}
-
-/* CSS pour aligner les textes à gauche */
 .tmp-label {
+	flex-grow: 1;
+  }
+  
+  /* validation du choix bouton rond transparent */
+  .tmp-input {
+	display: none;
+  }
+  
+  /* choix du rectangle avec le bouton vert */
+  .tmp-rectangle {
+	display: flex;
+	width: 490px;
+	position: relative;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.tmp-rectangle {
+	  display: flex;
+	  width: 100%;
+	}
+  }
+  
+  /* icône font awesome check */
+  .tmp-check {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 72px;
+	background-color: #99e2d0;
+	border-radius: 0px 5px 5px 0px;
+	position: absolute;
+	right: -50px; /* Position initiale à droite, en dehors du cadre */
+	transition: right 0.3s ease;
+  }
+  
+  /* bouton de validation vert glisse au survol */
+  .tmp-rectangle:hover .tmp-check {
+	right: 0; /* Glisse à l'intérieur au survol */
+  }
+  
+  /* bouton de validation vert reste en place une fois validé */
+  .tmp-label:has(.tmp-input:checked)~.tmp-check {
+	right: 0;
+  }
+  
+  /* CSS pour aligner les textes à gauche */
+  .tmp-label {
 	text-align: left;
   }
-
+  
   fieldset{
 	border: none;
   }
@@ -819,13 +823,13 @@ position:relative;
 }
 
 .title-menu {
-	margin-right: 10px; /* Ajustez la marge selon vos besoins */
+	margin-right: 10px; /*  */
 	
 }
 .title-menu-container {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /* Pour aligner à gauche */
+	align-items: flex-start; /*  */
 }
 .small-line {
 	width: 40px;
@@ -836,11 +840,11 @@ position:relative;
 }
 .section-title {
 	margin: 0;
-	margin-left: auto; /* Pousse le titre à droite */
+	margin-left: auto; /*  */
 }
 
 .icon-container {
-	margin-left: 0; /* Ajustez la marge selon vos besoins */
+	margin-left: 0; /*  */
 }
 
 .menu-item {
@@ -848,7 +852,7 @@ position:relative;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 10px 0; /* Ajoutez du padding si nécessaire */
+	padding: 10px 0; /*  */
 	border-bottom: 1px solid #ddd; /* Optionnel, pour séparer les items */
 }
 
@@ -857,7 +861,7 @@ position:relative;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	opacity: 1; /* Assurez-vous que l'opacité est réglée sur 1 pour rendre le bouton visible */
+	opacity: 1; /*  */
 }
 
 .submit-button {
