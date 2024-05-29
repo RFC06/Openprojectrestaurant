@@ -36,7 +36,8 @@
 	border: 1px solid var(--main-color);
 	border-radius: 50%;
   }
-  
+
+
   body {
 	margin: 0;
     padding: 0;
@@ -731,56 +732,75 @@ header {
 
 /* choix du rectangle sans le bouton vert */
 .tmp-label {
-	flex-grow: 1;
-  }
-  
-  /* validation du choix bouton rond transparent */
-  .tmp-input {
-	display: none;
-  }
-  
-  /* choix du rectangle avec le bouton vert */
+  flex-grow: 1;
+  position: relative; /* Assurez-vous que .tmp-label est en position relative pour que .tmp-check soit positionné correctement */
+}
+
+/* validation du choix bouton rond transparent */
+.tmp-input {
+  display: none;
+}
+
+/* choix du rectangle avec le bouton vert */
+.tmp-rectangle {
+  display: flex;
+  align-items: center; /* Ajoutez cette ligne pour centrer verticalement les éléments à l'intérieur */
+  width: 100%;
+  height:72px;
+  position: relative; /* Assurez-vous que .tmp-rectangle est en position relative pour que .tmp-check soit positionné correctement */
+}
+
+@media screen and (max-width: 768px) {
   .tmp-rectangle {
-	display: flex;
-	width: 100%;
-	position: relative;
+    display: flex;
+    width: 100%;
   }
-  
-  @media screen and (max-width: 768px) {
-	.tmp-rectangle {
-	  display: flex;
-	  width: 100%;
-	}
-  }
-  
-  /* icône font awesome check */
-  .tmp-check {
+}
+
+/* icône font awesome check */
+.tmp-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 72px;
+  background-color: #99e2d0;
+  border-radius: 0px 5px 5px 0px;
+  position: absolute;
+  right: -50px; /* Position initiale à droite, en dehors du cadre */
+  top: 0; /* Aligner avec le haut du parent */
+  transition: right 0.3s ease;
+}
+
+.tmp-check i {
+	width: 30px;
+	height: 30px;
+	border:solid;
+	color: white;
+	border-color: white;
+	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
-	height: 72px;
-	background-color: #99e2d0;
-	border-radius: 0px 5px 5px 0px;
-	position: absolute;
-	right: -50px; /* Position initiale à droite, en dehors du cadre */
-	transition: right 0.3s ease;
+	font-size: 16px;
   }
-  
-  /* bouton de validation vert glisse au survol */
-  .tmp-rectangle:hover .tmp-check {
-	right: 0; /* Glisse à l'intérieur au survol */
-  }
-  
-  /* bouton de validation vert reste en place une fois validé */
-  .tmp-label:has(.tmp-input:checked)~.tmp-check {
-	right: 0;
-  }
-  
-  /* CSS pour aligner les textes à gauche */
-  .tmp-label {
-	text-align: left;
-  }
+
+/* bouton de validation vert glisse au survol */
+.tmp-rectangle:hover .tmp-check {
+  right: 0; /* Glisse à l'intérieur au survol */
+}
+
+/* bouton de validation vert reste en place une fois validé */
+.tmp-label:has(.tmp-input:checked)~.tmp-check {
+  right: 0;
+}
+
+/* CSS pour aligner les textes à gauche */
+.tmp-label {
+  text-align: left;
+  position: relative; /* Assurez-vous que .tmp-label est en position relative pour que .tmp-check soit positionné correctement */
+}
+
   
   fieldset{
 	border: none;
