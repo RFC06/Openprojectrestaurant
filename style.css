@@ -21,9 +21,27 @@
   .fa-solid {
 
 	opacity: 0px;
-	color: #9356dc;
+	
 
   }
+
+  .heart-label input {
+    display: none;
+	background-color: #000;
+
+}
+
+.heart-label i {
+    font-size: 2em;
+  
+    cursor: pointer;
+}
+
+.heart-label input:checked + i {
+    color: #9356dc;
+	background-color: #9356dc;
+}
+
   
   /* picto input localisation  */
   .fa-solid.fa-location-dot {
@@ -164,7 +182,7 @@
   .card div.nouveau-tag {
 	border-radius: 2px;
 	background-color: var(--green-color);
-	color: green;
+	color: var(--green-color);
   
 	display: inline;
 	padding: 6px;
