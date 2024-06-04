@@ -645,20 +645,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-}
-
-@media (min-width: 769px) {
+  }
+  
+  @media (min-width: 769px) {
 	.option {
-	
-		margin: 10px auto; /* Centrer horizontalement */
-		gap:5px;
-	
+	  margin: 10px auto; /* Centrer horizontalement */
+	  gap: 5px;
 	}
-}
-.option:active{display: block;
+  }
 
-}
 
   .subtitle {
 	font-size: 14px;
@@ -668,8 +663,9 @@
   .price {
 	font-size: 14px;
 	color: #000;
-	padding-right: 10px; 
+	padding-right: 10px;
   }
+  
   
 
 /* travail sur l'image du header */
@@ -696,26 +692,21 @@ header {
 
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
-    background-color:var(--light-gray-color); 
-    gap: 0px;
+	background-color: var(--light-gray-color);
+	gap: 0px;
 	max-width: 1055px;
-
-    opacity: 0px;
-	position:relative;
-	margin:-51px auto 0 auto;
-
-    padding: 51px 20px;
-
-    text-align: center;
+	opacity: 0px;
+	position: relative;
+	margin: -51px auto 0 auto;
+	padding: 51px 20px;
+	text-align: center;
 	display: flex;
 	flex-direction: column;
-    align-items: center;
+	align-items: center;
 	justify-content: center;
-	border-radius:51px 51px 0 0;
+	border-radius: 51px 51px 0 0;
+  }
   
-
-}
-
 
 
 
@@ -739,11 +730,6 @@ header {
     margin-top: 20px; 
 }
 
-/* choix du rectangle sans le bouton vert */
-.tmp-label {
-  flex-grow: 1;
-  position: relative; /* Assurez-vous que .tmp-label est en position relative pour que .tmp-check soit positionné correctement */
-}
 
 /* validation du choix bouton rond transparent */
 .tmp-input {
@@ -758,64 +744,96 @@ header {
   width: 100%;
   height:72px;
   position: relative; /* Assurez-vous que .tmp-rectangle est en position relative pour que .tmp-check soit positionné correctement */
+  
 }
 
 @media screen and (max-width: 768px) {
   .tmp-rectangle {
     display: flex;
     width: 100%;
-  }
-}
+  }}
 
-/* icône font awesome check */
-.tmp-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 72px;
-  background-color: #99e2d0;
-  border-radius: 0px 5px 5px 0px;
-  position: absolute;
-  right: -50px; /* Position initiale à droite, en dehors du cadre */
-  top: 0; /* Aligner avec le haut du parent */
-  transition: right 0.3s ease;
-}
-
-.tmp-check i {
-	width: 30px;
-	height: 30px;
-	border:solid;
-	color: white;
-	border-color: white;
-	border-radius: 50%;
+.tmp-check,
+.tmp-check-test{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 16px;
+	width: 50px;
+	height: 72px;
+	background-color: #99e2d0;
+	border-radius: 0px 5px 5px 0px;
+	position: absolute;
+	right: -50px; /* Position initiale à droite, en dehors du cadre */
+	top: 0; /* Aligner avec le haut du parent */
+	transition: right 0.3s ease; 
   }
+  
+  .tmp-check i,
+  .tmp-check-test i {
+	  width: 30px;
+	  height: 30px;
+	  border:solid;
+	  color: white;
+	  border-color: white;
+	  border-radius: 50%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  font-size: 16px;
+	}
 
 /* bouton de validation vert glisse au survol */
-.tmp-rectangle:hover .tmp-check {
+.tmp-rectangle:hover .tmp-check,
+.tmp-rectangle:hover .tmp-check-test  {
   right: 0; /* Glisse à l'intérieur au survol */
+  
 }
+.tmp-rectangle:hover .tmp-label-price {
+	transform: translateX(-50px); /* Pousse le prix vers la gauche au survol */
+  }
+  
+  .tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
+	transform: translateX(-50px); /* Maintient le prix à gauche lorsque sélectionné */
+  }
+.tmp-rectangle:hover .tmp-check-test   {
+	margin-right: 0;
 
-/* bouton de validation vert reste en place une fois validé */
-.tmp-label:has(.tmp-input:checked)~.tmp-check {
-  right: 0;
+}
+.tmp-input:checked ~ .tmp-rectangle .tmp-check,
+.tmp-input:checked ~ .tmp-rectangle .tmp-check-test {
+  right: 0; /* Le bouton de validation vert reste en place une fois validé */
 }
 
 /* CSS pour aligner les textes à gauche */
 .tmp-label {
-  text-align: left;
+  flex-grow: 1;  
   position: relative; /* Assurez-vous que .tmp-label est en position relative pour que .tmp-check soit positionné correctement */
-}
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:5px;
 
-  
-  fieldset{
+
+}
+.tmp-label-price {
+	display: flex;
+	align-items: center;
+	transition: transform 0.3s ease;
+	
+	
+
+}
+.tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
+	margin-right: 50px; /* Ajustez selon vos besoins */
+	
+	
+  }
+
+fieldset{
 	border: none;
 	padding:0;
 	margin:0;
+	
   }
 .menu-items {
 	width:100%;
@@ -865,7 +883,7 @@ position:relative;
 .small-line {
 	width: 40px;
 	height: 4px;
-	background-color: green;
+	background-color: var(--green-color);
 	margin-top: 2px;
 
 }
@@ -921,3 +939,32 @@ position:relative;
 }
 
 
+.heart-container {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 24px;
+	position: relative;
+  }
+
+  .heart-container input {
+	display: none; /* Masquer l'input */
+  }
+
+  .heart-container .fa-heart {
+	color: black; /* Couleur par défaut */
+	transition: color 0.3s ease; /* Transition pour un effet fluide */
+  }
+
+  .heart-container .fa-heart:hover {
+	color: #9356dc; /* Couleur au survol */
+  }
+
+  .heart-container input:checked + label .fa-heart {
+	color: #9356dc; /* Couleur après le clic */
+  }
+
+  .heart-container input:checked + label .fa-heart::before {
+	content: '\f004'; /* Code unicode de l'icône fa-heart solide */
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900; /* Solide */
+  }
