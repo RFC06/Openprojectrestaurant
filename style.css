@@ -831,11 +831,13 @@ header {
 	}
 .tmp-rectangle:hover .tmp-check   {
 	margin-right: 0;
+	display:block;
 	
 }
 
 .tmp-check{
 	display:none;
+	
 	
 
 
@@ -843,12 +845,12 @@ header {
 .tmp-input:checked ~ .tmp-rectangle .tmp-check,
 .tmp-input:checked ~ .tmp-rectangle .tmp-check-test {
   right: 0; /* Le bouton de validation vert reste en place une fois validé */
+ 
 
 }
 .tmp-input:checked ~ .tmp-check-test{
 	display:flex;
 
- 
 }
 
 /* Show the submit button when the checkbox is checked */
@@ -872,10 +874,15 @@ header {
 	display: flex;
 	align-items: center;
 	transition: transform 0.3s ease;
-	
-	
-
 }
+/* bouton de validation vert qui apparaît au survol et icône font awesome check qui apparaît au survol */
+.tmp-label:has(.tmp-input:checked)~.tmp-check{
+	display: block;
+	position: fixed;
+	}
+
+
+
 .tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
 	margin-right: 50px; /* Ajustez selon vos besoins */
 	
