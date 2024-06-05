@@ -651,8 +651,7 @@
 	.option {
 	  margin: 10px auto; /* Centrer horizontalement */
 	  gap: 5px;
-	}
-  }
+	}}
 
 
   .subtitle {
@@ -728,6 +727,7 @@ header {
     cursor: pointer;
     align-self: flex-end; 
     margin-top: 20px; 
+	
 }
 
 
@@ -753,9 +753,10 @@ header {
     width: 100%;
   }}
 
-.tmp-check,
+
 .tmp-check-test{
 	display: flex;
+	
 	align-items: center;
 	justify-content: center;
 	width: 50px;
@@ -766,9 +767,10 @@ header {
 	right: -50px; /* Position initiale à droite, en dehors du cadre */
 	top: 0; /* Aligner avec le haut du parent */
 	transition: right 0.3s ease; 
+	
   }
   
-  .tmp-check i,
+  
   .tmp-check-test i {
 	  width: 30px;
 	  height: 30px;
@@ -780,28 +782,79 @@ header {
 	  align-items: center;
 	  justify-content: center;
 	  font-size: 16px;
+	 
 	}
+
+	.tmp-check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 72px;
+		background-color: #99e2d0;
+		border-radius: 0px 5px 5px 0px;
+		position: absolute;
+		right: 0; /* Position à droite */
+		top: 0; /* Aligner avec le haut du parent */
+		transition: right 0.3s ease;
+		visibility: hidden;
+	  }
+  
+	  .tmp-check i {
+		width: 30px;
+		height: 30px;
+		border: solid;
+		color: white;
+		border-color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+	  }
 
 /* bouton de validation vert glisse au survol */
 .tmp-rectangle:hover .tmp-check,
 .tmp-rectangle:hover .tmp-check-test  {
-  right: 0; /* Glisse à l'intérieur au survol */
-  
+  right: 0; /* Glisse à l'intérieur au survol */  
 }
+
+
+
 .tmp-rectangle:hover .tmp-label-price {
 	transform: translateX(-50px); /* Pousse le prix vers la gauche au survol */
-  }
+
+ }
   
   .tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
 	transform: translateX(-50px); /* Maintient le prix à gauche lorsque sélectionné */
-  }
-.tmp-rectangle:hover .tmp-check-test   {
+	}
+.tmp-rectangle:hover .tmp-check   {
 	margin-right: 0;
+	
+}
+
+.tmp-check{
+	display:none;
+	
+
 
 }
 .tmp-input:checked ~ .tmp-rectangle .tmp-check,
 .tmp-input:checked ~ .tmp-rectangle .tmp-check-test {
   right: 0; /* Le bouton de validation vert reste en place une fois validé */
+
+}
+.tmp-input:checked ~ .tmp-check-test{
+	display:flex;
+
+ 
+}
+
+/* Show the submit button when the checkbox is checked */
+.tmp-input:checked ~ .submit-button {
+    display: flex;
+	
 }
 
 /* CSS pour aligner les textes à gauche */
@@ -827,6 +880,10 @@ header {
 	margin-right: 50px; /* Ajustez selon vos besoins */
 	
 	
+  }
+
+  .tmp-input:checked + .tmp-rectangle .tmp-check {
+	visibility: visible;
   }
 
 fieldset{
@@ -933,6 +990,21 @@ position:relative;
 	cursor: pointer;
 	transition: opacity 0.3s ease;
 }
+
+.submit-button-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	
+  }
+
+  .submit-button {
+	width: 100px;
+	height: 40px;
+	background-color: var(--green-color);
+	cursor: pointer;
+	align-self: flex-end;
+  }
 
 .submit-button:hover {
 	opacity: 0.8; /* Change l'opacité au survol pour un effet visuel */
