@@ -1,4 +1,4 @@
-/****** General ***********/
+    /****** General ***********/
 
 :root {
 	--blue-gray-color: #c5e2f8;
@@ -10,16 +10,22 @@
 	--light-gray-color: #eaeaea;
   }
   
+  body {
+	margin: 0;
+    padding: 0;
+    height: 100%;
+	font-family: 'Roboto', sans-serif;
+	}
+
   /****** défilement fluide de la page html *****/
   html {
 	scroll-behavior: smooth;
   }
   /* icônes */
   .fa-solid .fa-heart {
-	color: violet;
+	color: #9356dc;
   }
   .fa-solid {
-
 	opacity: 0px;
   }
 
@@ -52,14 +58,23 @@
 	border: 1px solid var(--main-color);
 	border-radius: 50%;
   }
+  .circle-button {
+	width: 14px;
+	height: 14px;
+	top:calc(50% - 12px);
+	line-height: 14px;;
+	border-radius: 50%;
+	background-color: #9356dc;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px;
+	position: absolute;
+	left: -12px;
+	display: flex;
+	justify-content: center;
+  }
 
-
-  body {
-	margin: 0;
-    padding: 0;
-    height: 100%;
-	font-family: 'Roboto', sans-serif;
-	}
   
   
   a {
@@ -180,8 +195,7 @@
   .card div.nouveau-tag {
 	border-radius: 2px;
 	background-color: var(--green-color);
-	color: var(--green-color);
-  
+	color: white;
 	display: inline;
 	padding: 6px;
 	position: absolute;
@@ -265,28 +279,6 @@
 	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 	z-index: 100;
   }
-  /* logo  */
-  header img {
-	height: 36x;
-	width: 136px;
-	margin: 30px 0;
-	align-items: center;
-	position:static;
-  }
-
-
-/* Media query pour les écrans larges */
-@media (min-width: 1440px) {
-    .adaptive-image {
-        max-width: 1440px; 
-        height: 383px; 
-        position: absolute; 
-        top: 96px;
-        left: 50%; 
-        transform: translateX(-50%); 
-    }
-}
-
   
   header div.filter-search {
 	width: 100%;
@@ -341,6 +333,7 @@
 	display: flex;
 	border: 0;
 	height: 50px;
+
 	
   }
   
@@ -380,29 +373,6 @@
 	}
   }
   
-  /* barre de recherche formulaire 1 */
-  .input-section input[type="submit"] {
-	background-color: var(--main-color);
-	color: var(--white-color);
-	font-weight: 700;
-	font-size: 18px;
-	padding: 14px 16px;
-	border: 1px solid var(--main-color);
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-	display: block;
-	height: 70px;
-	
-  }
-  /* barre de recherche formulaire 1 */
-  @media screen and (max-width: 768px) {
-	.input-section input[type="submit"] {
-	  display: none;
-	  justify-content: space-between;
-	  margin: 0;
-	  padding: 0;
-	  width: 100%;
-	}}
   
   .card-bouton {
 	display: flex;
@@ -428,7 +398,6 @@
 	font-weight: 500;
 	line-height: 18.75px;
 	text-align: center;
-	
   }
 
   @media screen and (max-width: 768px) {
@@ -439,7 +408,6 @@
 	  width: 218px;
 	  height: 50px;
 	  border-radius: 20px;
-	 
 	  
 	}}
   
@@ -573,122 +541,10 @@
 
 	}}
 
-  .logo img {
-	width: 100px;
-	filter: invert(100%);
-  }
-  
-  /* Media Query pour les écrans de taille maximale de 768px (taille typique des smartphones) */
-  @media (max-width: 768px) {
-	.footer-content {
-	  flex-direction: column;
-	  text-align: left;
-	  margin-left: 0;
-	  margin-right: 0;
-	}
-  
-	.footer-section {
-	  margin-bottom: 10px;
-	 
-	  text-align: left;
-	}
-  }
-  
-  /* Media Query pour les écrans de taille minimale de 769px (grands écrans) */
-  @media (min-width: 769px) {
-	.footer-content {
-	  align-items: flex-start;
-	  justify-content: flex-end;
-	  margin-right: 10px;
-	}
-  
-	.logo {
-	  order: 5;
-	}}
-  
-  .circle-button {
-	width: 14px;
-	height: 14px;
-	top:calc(50% - 12px);
-	line-height: 14px;;
-	border-radius: 50%;
-	background-color: #9356dc;
-	color: #fff;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 5px;
-	position: absolute;
-	left: -12px;
-	display: flex;
-	justify-content: center;
-  }
-  
-  
-  .small-line {
-	width: 40px;
-	height: 3px;
-	background-color: var(--green-color);
-  }
-  
+    
   /* style page menu */
    /* rectangle choix : entrée, plats, desserts */ 
  
-
-   .option {
-	height: 73px;
-	position: relative;
-	background-color: #ffffff;
-	border-color: transparent;
-	border-radius: 5px;
-	margin-bottom: 10px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-  }
-  
-  @media (min-width: 769px) {
-	.option {
-	  margin: 10px auto; /* Centrer horizontalement */
-	  gap: 5px;
-	}}
-
-
-  .subtitle {
-	font-size: 14px;
-	color: #666666;
-  }
-  
-  .price {
-	font-size: 14px;
-	color: #000;
-	padding-right: 10px;
-	transition: transform 0.3s ease;
-  }
-  
-  
-
-/* travail sur l'image du header */
-
-.header-image {
-    width:100%;
-    height: 383px;
-    object-fit: cover; 
-    /* margin-top: 0px; /*  */
-	position:static;
-
-}
-
-/* en tête avec flèche et logo */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-	gap:0px;
-}
-
-
-
 /* Styles pour la section des entrées, plats et desserts */
 .menu-section {
 	background-color: var(--light-gray-color);
@@ -705,224 +561,19 @@ header {
 	justify-content: center;
 	border-radius: 51px 51px 0 0;
   }
+
+  
+
   
 
 
-
-	.adaptive-image {
-		max-width: 100%;
-		height: auto;
-		
-	}
 /* logo et titre du menu */
 .section-title {
     margin-bottom: 20px;
 }
 
-/* bouton vert qui apparaît au survol */
-.submit-button {
-    width: 50px;
-    height: 73px;
-    background-color: var(--green-color);
-    cursor: pointer;
-    align-self: flex-end; 
-    margin-top: 20px; 
-	
-}
-
-.submit-button-container {
-	display: flex;
-	justify-content: center;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background-color: #fff;
-	padding: 10px 0;
-	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
 
 
-/* validation du choix bouton rond transparent */
-.tmp-input {
-  display: none;
-}
-
-/* choix du rectangle avec le bouton vert */
-.tmp-rectangle {
-  display: flex;
-  overflow: hidden;
-  align-items: center; /* Ajoutez cette ligne pour centrer verticalement les éléments à l'intérieur */
-  width: 100%;
-  height:72px;
-  position: relative; /* Assurez-vous que .tmp-rectangle est en position relative pour que .tmp-check soit positionné correctement */
-  
-}
-
-@media screen and (max-width: 768px) {
-  .tmp-rectangle {
-    display: flex;
-    width: 100%;
-  }}
-
-
-.tmp-check-test{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 50px;
-	height: 72px;
-	background-color: #99e2d0;
-	border-radius: 0px 5px 5px 0px;
-	position: absolute;
-	right: -50px; /* Position initiale à droite, en dehors du cadre */
-	top: 0; /* Aligner avec le haut du parent */
-	transition: right 0.3s ease; 
-	
-  }
-
-
-  
-  .tmp-check-test i {
-	  width: 30px;
-	  height: 30px;
-	  border:solid;
-	  color: white;
-	  border-color: white;
-	  border-radius: 50%;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  font-size: 16px;
-	 
-	}
-
-	.tmp-check {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 50px;
-		height: 72px;
-		background-color: #99e2d0;
-		border-radius: 0px 5px 5px 0px;
-		position: absolute;
-		right: 0; /* Position à droite */
-		top: 0; /* Aligner avec le haut du parent */
-		transition: right 0.3s ease;
-		visibility: hidden;
-	  }
-  
-	  .tmp-check i {
-		width: 30px;
-		height: 30px;
-		border: solid;
-		color: white;
-		border-color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 16px;
-	  }
-
-/* bouton de validation vert glisse au survol */
-.tmp-rectangle:hover .tmp-check,
-.tmp-rectangle:hover .tmp-check-test  {
-  right: 0; /* Glisse à l'intérieur au survol */  
-}
-    .tmp-input:checked + .tmp-rectangle .tmp-check {
-            visibility: visible;
-            right: 0;
-        }
-
-        .tmp-input:checked + .tmp-rectangle .tmp-label-price .price {
-            transform: translateX(-50px);
-        }
-
-
-
-.tmp-rectangle:hover .tmp-label-price {
-	transform: translateX(-50px); /* Pousse le prix vers la gauche au survol */
-
- }
-  
-  .tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
-	transform: translateX(-50px); /* Maintient le prix à gauche lorsque sélectionné */
-	}
-.tmp-rectangle:hover .tmp-check   {
-	margin-right: 0;
-	display:block;
-	
-}
-
-.tmp-check{
-	display:none;
-	
-	
-
-
-}
-.tmp-input:checked ~ .tmp-rectangle .tmp-check,
-.tmp-input:checked ~ .tmp-rectangle .tmp-check-test {
-  right: 0; /* Le bouton de validation vert reste en place une fois validé */
- 
-
-}
-.tmp-input:checked ~ .tmp-check-test{
-	display:flex;
-
-}
-
-/* Show the submit button when the checkbox is checked */
-.tmp-input:checked ~ .submit-button {
-    display: flex;
-	
-}
-
-/* CSS pour aligner les textes à gauche */
-.tmp-label {
-  flex-grow: 1;  
-  position: relative; /* Assurez-vous que .tmp-label est en position relative pour que .tmp-check soit positionné correctement */
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  margin:5px;
-
-
-}
-.tmp-label-price {
-	display: flex;
-	align-items: center;
-	transition: transform 0.3s ease;
-	
-}
-/* bouton de validation vert qui apparaît au survol et icône font awesome check qui apparaît au survol */
-.tmp-label:has(.tmp-input:checked)~.tmp-check{
-	display: block;
-
-	}
-
-
-
-.tmp-input:checked ~ .tmp-rectangle .tmp-label-price {
-	margin-right: 50px; /* Ajustez selon vos besoins */
-	
-	
-  }
-
-  .tmp-input:checked + .tmp-rectangle .tmp-check {
-	visibility: visible;
-  }
-
-fieldset{
-	border: none;
-	padding:0;
-	margin:0;
-	
-  }
-.menu-items {
-	width:100%;
-
-}
 
 
 #restaurant-page-header{
@@ -964,13 +615,7 @@ position:relative;
 	flex-direction: column;
 	align-items: flex-start; /*  */
 }
-.small-line {
-	width: 40px;
-	height: 4px;
-	background-color: var(--green-color);
-	margin-top: 2px;
 
-}
 .section-title {
 	margin: 0;
 	margin-left: auto; /*  */
@@ -989,55 +634,8 @@ position:relative;
 	border-bottom: 1px solid #ddd; /* Optionnel, pour séparer les items */
 }
 
-.submit-button-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	opacity: 1; /*  */
-}
 
-.submit-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 218px;
-	height: 50px;
-	
-	border-radius: 20px;
-	background: rgb(147, 86, 220);
-	background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-	color: white;
-	font-family: Roboto, sans-serif;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 18.75px;
-	text-align: center;
-	border: none;
-	cursor: pointer;
-	transition: opacity 0.3s ease;
-}
-
-.submit-button-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
-	
-  }
-
-  .submit-button {
-	width: 100px;
-	height: 40px;
-	background-color: var(--green-color);
-	cursor: pointer;
-	align-self: flex-end;
-  }
-
-.submit-button:hover {
-	opacity: 0.8; /* Change l'opacité au survol pour un effet visuel */
-}
-
-
+/* Animation du coeur */
 .heart-container {
 	display: inline-block;
 	cursor: pointer;
@@ -1085,8 +683,6 @@ position:relative;
 	justify-content: space-between;
 	align-items: center;
 	
-	
-	
 }
 
 .subtitle {
@@ -1116,63 +712,7 @@ position:relative;
 
 }
 
- /* grand rectangle blanc sans border-radius*/
-.tmp-rectangle{
-	display: flex;
-	overflow: hidden;
-	align-items: center;
-	width: 100%;
-	height: 72px;
-	position: relative;
-	border:solid;
-}
 
-
-.tmp-check {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 50px;
-	height: 72px;
-	background-color: #4CAF50;
-	border-radius: 0 5px 5px 0;
-	position: absolute;
-	right: -50px;
-	transition: right 0.3s ease;
-
-}
-
-.tmp-check i {
-	width: 30px;
-	height: 30px;
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 16px;
-
-}
-
-.tmp-label {
-	flex-grow: 1;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	
-}
-
-.tmp-label-price {
-	display: flex;
-	height:73px;
-	align-items: center;
-}
-
-
-
-.tmp-input:checked + .tmp-rectangle .tmp-label-price .price {
-	transform: translateX(-50px);
-
-}
 
 fieldset {
 	border: none;
@@ -1180,6 +720,56 @@ fieldset {
 	margin: 0;
 }
 
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+  }
+  
+  .footer-content {
+	display: flex;
+	justify-content: space-between;
+	
+	gap: 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+	.footer-menu {
+		display:flex;
+		gap:20px;
 
+	}}
 
-   /* section entrees test  */
+  .logo img {
+	width: 100px;
+	filter: invert(100%);
+  }
+  
+  /* Media Query pour les écrans de taille maximale de 768px (taille typique des smartphones) */
+  @media (max-width: 768px) {
+	.footer-content {
+	  flex-direction: column;
+	  text-align: left;
+	  margin-left: 0;
+	  margin-right: 0;
+	}
+  
+	.footer-section {
+	  margin-bottom: 10px;
+	 
+	  text-align: left;
+	}
+  }
+  
+  /* Media Query pour les écrans de taille minimale de 769px (grands écrans) */
+  @media (min-width: 769px) {
+	.footer-content {
+	  align-items: flex-start;
+	  justify-content: flex-end;
+	  margin-right: 10px;
+	}
+  
+	.logo {
+	  order: 5;
+	}}
+  

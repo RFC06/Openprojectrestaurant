@@ -31,25 +31,9 @@
     <div class="image-container">
         <img src="./images/restaurants/palette-du-gout.jpg" alt="Image adaptable" class="header-image">
     </div>
-
   
 
 
-    <section class="menu-section">
-      <div class="section-container">
-        <h4 class="section-title">La palette du goût</h4>
-        <div>
-          <div class="heart-container">
-            <input type="checkbox" id="heart-checkbox" />
-            <label for="heart-checkbox">
-              <i class="fa-regular fa-heart"></i>
-            </label>
-          </div>
-        </div>
-    </div>
-      <div class="menu-items">
-
-      <form>
         <!-- Section Entrées -->
         <fieldset>
           <div class="section-container">
@@ -59,23 +43,29 @@
           </div>
 
           <div class="option">
-            <label class="tmp-rectangle">
-              <input type="radio" name="entree" value="entree1" class="tmp-input" />
-              <div class="tmp-label">
-                <div>
-                  <div>Fricassée d'escargots</div>
-                  <div class="subtitle">Au piment d'Espelette</div>
+            <input type="radio" name="entree" value="entree1" class="tmp-input" id="entree1"/>
+            <label class="tmp-rectangle" for="entree1">
+                <div class="tmp-label">
+                    <div>
+                        <div>Fricassée d'escargots</div>
+                        <div class="subtitle">Au piment d'Espelette</div>
+                    </div>
+                    <div class="tmp-label-price">
+                        <div class="price">25€</div>
+                    </div>
                 </div>
-                <div class="tmp-label-price">
-                  <div class="price">25€</div>
+                <div class="tmp-check">
+                    <i class="fa-solid fa-check"></i>
                 </div>
-              </div>
-              <div class="tmp-check-test">
-                <i class="fa-solid fa-check"></i>
-              </div>
             </label>
-          </div>
-          
+        </div>
+       
+    <!-- Section Plats -->
+ 
+
+
+
+
           <div class="option">
             <label class="tmp-rectangle">
               <input type="radio" name="entree" value="entree1" class="tmp-input" />
@@ -94,23 +84,9 @@
             </label>
           </div>
           
-    <div class="option">
-      <label class="tmp-rectangle">
-        <div class="tmp-label">
-          <input type="radio" name="entree" value="entree1" class="tmp-input" />
-          <div>
-            <div>Fricassée d'escargots</div>
-            <div class="subtitle">Au piment d'Espelette</div>
-          </div>
-          <div class="tmp-label-price">
-            <div class="price">25€</div>
-          </div>
-        </div>
-        <div class="tmp-check-test">
-          <i class="fa-solid fa-check"></i>
-        </div>
-      </label>
-    </div>
+         
+          
+   
     
 
 
@@ -262,7 +238,7 @@
     
       
         <!-- Bouton de soumission -->
-      <div class="submit-button-container">
+      <div class="submit-button">
         <input type="submit" class="submit-button" value="Envoyer" />
     </div>
   </form>
