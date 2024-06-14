@@ -141,6 +141,14 @@ header {
     margin-right: 24px;
   }
 
+  @media (min-width: 769px) {
+	.heart-container {
+	  margin-right:0;
+	  margin-left: 24px;
+
+	 
+	}}
+
   .heart-container input {
 	display: none; /* Masquer l'input */
   }
@@ -150,13 +158,45 @@ header {
 	transition: color 0.3s ease; /* Transition pour un effet fluide */
   }
 
-  .heart-container .fa-heart:hover {
-	color: #9356dc; /* Couleur au survol */
-  }
+  .heart-container {
+	display: inline-block;
+	font-size: 24px;
+}
 
-  .heart-container input:checked + label .fa-heart {
-	color: #9356dc; /* Couleur après le clic */
-  }
+.heart-container .fa-heart {
+	background: linear-gradient(
+		to right,
+		rgba(147, 86, 220, 1) 0%,
+		rgb(201, 80, 167) 100%
+	);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: background 0.3s;
+}
+
+.heart-container .fa-heart:hover {
+	background: linear-gradient(
+		to right,
+		rgba(147, 86, 220, 1) 0%,
+		rgba(255, 121, 218, 1) 100%
+	);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.heart-container input {
+	display: none;
+}
+
+.heart-container input:checked + label .fa-heart {
+	background: linear-gradient(
+		to right,
+		rgba(147, 86, 220, 1) 0%,
+		rgba(255, 121, 218, 1) 100%
+	);
+	-webkit-background-clip: text;
+	color: transparent;
+}
 
   .heart-container input:checked + label .fa-heart::before {
 	content: '\f004'; /* Code unicode de l'icône fa-heart solide */
@@ -247,12 +287,18 @@ header {
 
 .section-container {
     margin: 20px 0;
+	width:100%;
     display:flex;
     justify-content: space-between;
     align-items: center;
     gap:20px;
 }
+@media (min-width: 769px) {
+	.section-container {
+	 justify-content: center;
+	 
 
+	}}
 .section-title {
     margin-bottom: 20px;
 }
@@ -268,7 +314,10 @@ header {
     width: 100%;
     height: 72px;
     position: relative;
-   
+	padding-left: 14px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre au niveau de la bordure du bas */
+	border-radius:5px;
+
 }
 
 .tmp-check {
@@ -276,7 +325,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 50px;
-    height: 72px;
+    height: 100%;
     background-color: var(--green-color);
     border-radius: 0 5px 5px 0;
     position: absolute;
@@ -287,6 +336,7 @@ header {
 .tmp-check i {
     width: 30px;
     height: 30px;
+    border-radius:50%;
     color: white;
     display: flex;
     align-items: center;
@@ -331,34 +381,44 @@ fieldset {
 }
 
 
-.submit-button {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    border:transparent;
-  
-	width: 218px;
-	height: 50px;
-	top: 293px;
-	left: 82px;
-	gap: 15px;
-	opacity: 0px;
-  
-	border-radius: 20px;
-	background: rgb(147, 86, 220);
-	background: linear-gradient(
-	  0deg,
-	  rgba(147, 86, 220, 1) 0%,
-	  rgba(255, 121, 218, 1) 100%	);
-	color: white;
-	font-family: Roboto;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 18.75px;
-	text-align: center;
-	
-  }
+.parent-container {
+  position: relative;
+  width: 100%;
+  height: 20vh; /* ou toute autre valeur appropriée */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espace entre les boutons */
+}
 
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  width: 218px;
+  height: 50px;
+  gap: 15px;
+  opacity: 1; /* Opacité initiale */
+  border-radius: 20px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  transition: opacity 0.3s ease; /* Transition fluide */
+}
+
+.submit-button:hover {
+  opacity: 0.5; /* Augmente l'opacité au survol */
+}
 
 
 footer {
@@ -413,4 +473,19 @@ footer {
 	.logo {
 	  order: 5;
 	}}
+  
+/* test prix au dessus du texte*/
+  .subtitle {
+    position: relative;
+  }
+  
+  .price {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: white; /* Pour s'assurer que le prix est lisible par-dessus le texte */
+    padding: 0 5px;    /* Pour ajouter un peu d'espace autour du prix */
+    z-index: 1;        /* Assure que le prix est au-dessus du sous-titre */
+  }
   
