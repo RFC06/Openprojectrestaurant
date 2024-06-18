@@ -33,6 +33,7 @@ html {
   opacity: 0px;
 }
 
+
 .small-line {
   width: 40px;
   height: 3px;
@@ -137,10 +138,6 @@ header {
   display: none;
 }
 
-.heart-container .fa-heart {
-  color: black;
-  transition: color 0.3s ease;
-}
 
 .heart-container {
   display: inline-block;
@@ -148,13 +145,15 @@ header {
 }
 
 .heart-container .fa-heart {
+  color: black;
+  transition: color 0.3s ease;
   background: linear-gradient(
     to right,
     rgba(147, 86, 220, 1) 0%,
     rgb(201, 80, 167) 100%
   );
   -webkit-background-clip: text;
-  color: transparent;
+
   transition: background 0.3s;
 }
 
@@ -241,7 +240,7 @@ header {
   height: 73px;
   position: relative;
   background-color: #ffffff;
-  border: 1px solid transparent;
+ 
   border-color: transparent;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -259,7 +258,17 @@ header {
 .subtitle {
   font-size: 14px;
   color: #666666;
+ 
 }
+
+@media (max-width: 769px) {
+  .subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }}
+
 
 .price {
   font-size: 14px;
@@ -312,13 +321,16 @@ header {
   position: absolute;
   right: -50px;
   transition: right 0.3s ease, transform 0.3s ease;
+  
 }
 
 .tmp-check i {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  color: white;
+  background-color: white;
+  color: #99e2d0;
+
   display: flex;
   align-items: center;
   justify-content: center;
