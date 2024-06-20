@@ -21,6 +21,18 @@ body {
   margin-bottom: 20px;
 }
 
+h4{
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 800;
+ width: 341px;
+height: 27px;
+
+
+
+}
+
 /****** défilement fluide de la page html *****/
 html {
   scroll-behavior: smooth;
@@ -32,6 +44,7 @@ html {
 .fa-solid {
   opacity: 0px;
 }
+
 
 
 .small-line {
@@ -47,12 +60,10 @@ html {
   color: black;
   position: absolute;
   left: 17px;
-  top: calc(50% - 10px);
+
 }
 
-.arrow {
-  line-height: 20px;
-}
+
 
 /****** SECTION THREE ***********/
 .section-three .info-steps {
@@ -319,6 +330,9 @@ header {
   background-color: var(--green-color);
   border-radius: 0 5px 5px 0;
   position: absolute;
+  border:O;
+ 
+  padding:0;
   right: -50px;
   transition: right 0.3s ease, transform 0.3s ease;
   
@@ -463,8 +477,21 @@ footer {
 
   .logo {
     order: 5;
-  }
+  }}
+
+  .logo-container {
+    display: flex;
+    justify-content: center; /* Centrer le logo horizontalement */
+    align-items: center; /* Centrer le logo verticalement */
+    
 }
+
+.logo {
+    width: 150px; /* Largeur du logo */
+    height: auto; /* Ajuste automatiquement la hauteur pour garder les proportions */
+}
+
+
 
 /* test prix au dessus du texte */
 .subtitle {
