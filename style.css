@@ -734,13 +734,13 @@ header {
 }
 
 .title-menu {
-	margin-right: 10px; /*  */
+	margin-right: 10px; 
 	
 }
 .title-menu-container {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start; /*  */
+	align-items: flex-start; 
 }
 .small-line {
 	width: 40px;
@@ -751,11 +751,11 @@ header {
 }
 .section-title {
 	margin: 0;
-	margin-left: auto; /*  */
+	margin-left: auto; 
 }
 
 .icon-container {
-	margin-left: 0; /*  */
+	margin-left: 0; 
 }
 
 .menu-item {
@@ -763,8 +763,8 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	padding: 10px 0; /*  */
-	border-bottom: 1px solid #ddd; /*  */
+	padding: 10px 0; 
+	border-bottom: 1px solid #ddd; 
 }
 
 .submit-button-container {
@@ -772,7 +772,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	opacity: 1; /*  */
+	opacity: 1; 
 }
 
 .submit-button {
