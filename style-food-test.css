@@ -22,15 +22,13 @@ body {
 }
 
 h4{
+  margin: 0;
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
   font-weight: 800;
- width: 341px;
-height: 27px;
-
-
-
+  width: 341px;
+  height: 27px;
 }
 
 /****** défilement fluide de la page html *****/
@@ -251,7 +249,7 @@ header {
   height: 73px;
   position: relative;
   background-color: #ffffff;
- 
+
   border-color: transparent;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -267,18 +265,14 @@ header {
 }
 
 .subtitle {
+  position: relative;
   font-size: 14px;
   color: #666666;
- 
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-@media (max-width: 769px) {
-  .subtitle {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
-  }}
 
 
 .price {
@@ -311,6 +305,7 @@ header {
 
 .tmp-rectangle {
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
   align-items: center;
   width: 100%;
@@ -321,7 +316,27 @@ header {
   border-radius: 5px;
 }
 
-.tmp-check {
+
+.tmp-tmp-label {
+  overflow: hidden;
+}
+
+.tmp-tmp-price-check {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: -50px;
+  transition: margin 0.3s ease, transform 0.3s ease;
+}
+
+.tmp-tmp-price {
+  font-size: 14px;
+  color: #000;
+  padding-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tmp-tmp-check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -329,16 +344,9 @@ header {
   height: 100%;
   background-color: var(--green-color);
   border-radius: 0 5px 5px 0;
-  position: absolute;
-  border:O;
- 
-  padding:0;
-  right: -50px;
-  transition: right 0.3s ease, transform 0.3s ease;
-  
 }
 
-.tmp-check i {
+.tmp-tmp-check i {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -350,7 +358,7 @@ header {
   justify-content: center;
   font-size: 16px;
 }
-
+/* 
 .tmp-label {
   flex-grow: 1;
   display: flex;
@@ -363,28 +371,20 @@ header {
   height: 73px;
   align-items: center;
 }
-
-.tmp-input:checked + .tmp-rectangle .tmp-check {
-  right: 0;
-  transform: none;
+*/
+.tmp-rectangle:hover .tmp-tmp-price-check {
+  margin-right: 0;
 }
 
-.tmp-input:checked + .tmp-rectangle .tmp-label-price .price {
-  transform: translateX(-50px);
-}
-
-.tmp-rectangle:hover .tmp-check {
-  transform: translateX(-50px);
-}
-
-.tmp-rectangle:hover .tmp-label-price .price {
-  transform: translateX(-50px);
+.tmp-input:checked + .tmp-rectangle .tmp-tmp-price-check {
+  margin-right: 0;
 }
 
 fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  min-width: 0;
 }
 
 .parent-container {
@@ -481,22 +481,14 @@ footer {
 
   .logo-container {
     display: flex;
-    justify-content: center; /* Centrer le logo horizontalement */
-    align-items: center; /* Centrer le logo verticalement */
-    
+    justify-content: center; 
+    align-items: center; 
 }
 
 .logo {
-    width: 150px; /* Largeur du logo */
-    height: auto; /* Ajuste automatiquement la hauteur pour garder les proportions */
-}
-
-
-
-/* test prix au dessus du texte */
-.subtitle {
-  position: relative;
-}
+    width: 150px; 
+    height: auto; 
+  }
 
 .price {
   position: absolute;
@@ -505,5 +497,6 @@ footer {
   right: 0;
   background: white;
   padding: 0 5px;
-  z-index: 1; /* Assure que le prix est au-dessus du sous-titre */
+  z-index: 1; 
 }
+
