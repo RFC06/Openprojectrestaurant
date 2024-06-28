@@ -1,0 +1,503 @@
+/****** General ***********/
+
+:root {
+  --blue-gray-color: #c5e2f8;
+  --black-color: #000;
+  --gray-color: #d5f0f8;
+  --blue-color: #89c8fa;
+  --green-color: #99e2d0;
+  --pink-color: #fcc0ce;
+  --light-gray-color: #eaeaea;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+h4{
+  margin: 0;
+  font-family: Shrikhand;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 800;
+  width: 341px;
+  height: 27px;
+}
+
+/****** défilement fluide de la page html *****/
+html {
+  scroll-behavior: smooth;
+}
+/* icônes */
+.fa-solid .fa-heart {
+  color: violet;
+}
+.fa-solid {
+  opacity: 0px;
+}
+
+
+
+.small-line {
+  width: 40px;
+  height: 3px;
+  background-color: var(--green-color);
+}
+
+#restaurant-page-header {
+  position: relative;
+}
+.arrow-container {
+  color: black;
+  position: absolute;
+  left: 17px;
+
+}
+
+
+
+/****** SECTION THREE ***********/
+.section-three .info-steps {
+  padding: 50px;
+}
+@media screen and (max-width: 768px) {
+  .section-three {
+    padding: 20px;
+  }
+}
+
+.section-three #menu ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#menu ul .fa-solid {
+  margin-left: 0px;
+  text-align: left;
+}
+
+/* travail sur l'image du header */
+
+.header-image {
+  width: 100%;
+  height: 383px;
+  object-fit: cover;
+  /* margin-top: 0px; /*  */
+  position: static;
+}
+
+/* en tête avec flèche et logo */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 0px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.header-img {
+  height: 36px;
+  width: 136px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-img {
+    display: none;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 30px;
+  }
+}
+
+.price {
+  font-size: 14px;
+  color: #000;
+  padding-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Animation du coeur */
+
+.heart-container {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 24px;
+  position: relative;
+  margin-right: 24px;
+}
+
+@media (min-width: 769px) {
+  .heart-container {
+    margin-right: 0;
+    margin-left: 24px;
+  }
+}
+
+.heart-container input {
+  display: none;
+}
+
+
+.heart-container {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.heart-container .fa-heart {
+  color: black;
+  transition: color 0.3s ease;
+  background: linear-gradient(
+    to right,
+    rgba(147, 86, 220, 1) 0%,
+    rgb(201, 80, 167) 100%
+  );
+  -webkit-background-clip: text;
+
+  transition: background 0.3s;
+}
+
+.heart-container .fa-heart:hover {
+  background: linear-gradient(
+    to right,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heart-container input {
+  display: none;
+}
+
+.heart-container input:checked + label .fa-heart {
+  background: linear-gradient(
+    to right,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heart-container input:checked + label .fa-heart::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Styles pour la section des entrées, plats et desserts */
+
+.menu-section {
+  background-color: var(--light-gray-color);
+  gap: 0px;
+  max-width: 1055px;
+  opacity: 0px;
+  position: relative;
+  margin: -51px auto 0 auto;
+  padding: 51px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 51px 51px 0 0;
+}
+
+.menu-items {
+  width: 100%;
+  max-width: 634px;
+}
+
+/* barre de recherche formulaire 1 */
+.input-section input[type="submit"] {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 16px;
+  border: 1px solid var(--main-color);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: block;
+  height: 70px;
+  border: solid;
+}
+
+/* barre de recherche formulaire 1 */
+@media screen and (max-width: 768px) {
+  .input-section input[type="submit"] {
+    display: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.option {
+  display: flex;
+  height: 73px;
+  position: relative;
+  background-color: #ffffff;
+
+  border-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .option {
+    margin: 10px auto;
+    gap: 5px;
+  }
+}
+
+.subtitle {
+  position: relative;
+  font-size: 14px;
+  color: #666666;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+
+.price {
+  font-size: 14px;
+  color: #000;
+  padding-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.section-container {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 769px) {
+  .section-container {
+    justify-content: center;
+  }
+}
+.section-title {
+  margin-bottom: 20px;
+}
+
+.tmp-input {
+  display: none;
+}
+
+.tmp-rectangle {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  position: relative;
+  padding-left: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+
+.tmp-tmp-label {
+  overflow: hidden;
+}
+
+.tmp-tmp-price-check {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: -50px;
+  transition: margin 0.3s ease, transform 0.3s ease;
+}
+
+.tmp-tmp-price {
+  font-size: 14px;
+  color: #000;
+  padding-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tmp-tmp-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  background-color: var(--green-color);
+  border-radius: 0 5px 5px 0;
+}
+
+.tmp-tmp-check i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  color: #99e2d0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+/* 
+.tmp-label {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tmp-label-price {
+  display: flex;
+  height: 73px;
+  align-items: center;
+}
+*/
+.tmp-rectangle:hover .tmp-tmp-price-check {
+  margin-right: 0;
+}
+
+.tmp-input:checked + .tmp-rectangle .tmp-tmp-price-check {
+  margin-right: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.parent-container {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  width: 218px;
+  height: 50px;
+  gap: 15px;
+  opacity: 1;
+  border-radius: 20px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(255, 121, 218, 1) 100%
+  );
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.submit-button:hover {
+  opacity: 0.5;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-menu {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.logo img {
+  width: 100px;
+  filter: invert(100%);
+}
+
+/* Media Query pour les écrans de taille maximale de 768px  */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-section {
+    margin-bottom: 10px;
+
+    text-align: left;
+  }
+}
+
+/* Media Query pour les écrans de taille minimale de 769px (grands écrans) */
+@media (min-width: 769px) {
+  .footer-content {
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-right: 10px;
+  }
+
+  .logo {
+    order: 5;
+  }}
+
+  .logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.logo {
+    width: 150px; 
+    height: auto; 
+  }
+
+.price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: white;
+  padding: 0 5px;
+  z-index: 1; 
+}
+
