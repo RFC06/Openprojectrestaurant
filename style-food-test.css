@@ -218,6 +218,15 @@ header {
   max-width: 634px;
 }
 
+.title-menu {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.title-menu .small-line {
+  margin: 7px 0;
+}
+
 /* barre de recherche formulaire 1 */
 .input-section input[type="submit"] {
   background-color: var(--main-color);
@@ -248,8 +257,7 @@ header {
   display: flex;
   height: 73px;
   position: relative;
-  background-color: #ffffff;
-
+  background-color: transparent;
   border-color: transparent;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -257,22 +265,15 @@ header {
   align-items: center;
 }
 
+.option:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 769px) {
   .option {
     margin: 10px auto;
     gap: 5px;
   }
-}
-
-.subtitle {
-  position: relative;
-  font-size: 14px;
-  color: #666666;
-  text-wrap: nowrap;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 250px;
 }
 
 
@@ -284,7 +285,7 @@ header {
 }
 
 .section-container {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -308,18 +309,39 @@ header {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  background-color: #fff;
   align-items: center;
   width: 100%;
   height: 72px;
   position: relative;
   padding-left: 14px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 
 .tmp-tmp-label {
   overflow: hidden;
+}
+
+.tmp-tmp-label .title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tmp-tmp-label .subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tmp-tmp-price-check {
@@ -331,7 +353,9 @@ header {
 }
 
 .tmp-tmp-price {
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
   color: #000;
   padding-right: 10px;
   transition: transform 0.3s ease;
@@ -344,7 +368,6 @@ header {
   width: 50px;
   height: 100%;
   background-color: var(--green-color);
-  border-radius: 0 5px 5px 0;
 }
 
 .tmp-tmp-check i {
@@ -359,7 +382,7 @@ header {
   justify-content: center;
   font-size: 16px;
 }
-/* 
+/*
 .tmp-label {
   flex-grow: 1;
   display: flex;
@@ -384,18 +407,15 @@ header {
 fieldset {
   border: none;
   padding: 0;
-  margin: 0;
+  margin: 40px 0 0 0;
   min-width: 0;
 }
 
 .parent-container {
-  position: relative;
+  margin-top: 40px;
   width: 100%;
-  height: 70px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
 
 .submit-button {
@@ -407,7 +427,7 @@ fieldset {
   height: 50px;
   gap: 15px;
   opacity: 1;
-  border-radius: 20px;
+  border-radius: 25px;
   background: rgb(147, 86, 220);
   background: linear-gradient(
     0deg,
@@ -440,6 +460,12 @@ footer {
   gap: 20px;
 }
 
+/* .footer-menu {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+} */
+
 @media screen and (min-width: 768px) {
   .footer-menu {
     display: flex;
@@ -450,6 +476,22 @@ footer {
 .logo img {
   width: 100px;
   filter: invert(100%);
+}
+
+.footer-section i {
+  width: 28px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+.footer-section > i + a {
+  font-weight: 500;
 }
 
 /* Media Query pour les écrans de taille maximale de 768px  */
@@ -482,13 +524,13 @@ footer {
 
   .logo-container {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    width: 150px; 
-    height: auto; 
+    width: 150px;
+    height: auto;
   }
 
 .price {
@@ -498,6 +540,15 @@ footer {
   right: 0;
   background: white;
   padding: 0 5px;
-  z-index: 1; 
+  z-index: 1;
 }
 
+.loader-test {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+}
