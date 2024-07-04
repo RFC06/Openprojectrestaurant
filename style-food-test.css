@@ -147,23 +147,16 @@ header {
   display: none;
 }
 
-
-.heart-container {
-  display: inline-block;
-  font-size: 24px;
-}
-
 .heart-container .fa-heart {
   color: black;
-  transition: color 0.3s ease;
   background: linear-gradient(
     to right,
     rgba(147, 86, 220, 1) 0%,
     rgb(201, 80, 167) 100%
   );
   -webkit-background-clip: text;
-
-  transition: background 0.3s;
+  background-size: 0% 100%;
+  transition: background-size 0.3s ease;
 }
 
 .heart-container .fa-heart:hover {
@@ -174,18 +167,11 @@ header {
   );
   -webkit-background-clip: text;
   color: transparent;
-}
-
-.heart-container input {
-  display: none;
+  background-size: 100% 100%;
 }
 
 .heart-container input:checked + label .fa-heart {
-  background: linear-gradient(
-    to right,
-    rgba(147, 86, 220, 1) 0%,
-    rgba(255, 121, 218, 1) 100%
-  );
+  animation: fillHeart 1s forwards;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -195,6 +181,17 @@ header {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
+
+@keyframes fillHeart {
+  0% {
+    background-size: 0% 100%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+
 
 /* Styles pour la section des entrées, plats et desserts */
 
