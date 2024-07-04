@@ -1,5 +1,6 @@
 /****** General ***********/
-/* Style du loader */
+
+/* Style du loader partie 1 */
 #loader {
     border: 16px solid #f3f3f3; /* Couleur de fond */
     border-top: 16px solid #9356dc; /* Couleur de la barre de chargement */
@@ -27,11 +28,12 @@
     justify-content: center;
     align-items: center;
     animation: fadeOut 3s forwards;
+    z-index: 9999;
 }
 
 /* Animation pour masquer le loader après 3 secondes */
 @keyframes fadeOut {
-    0% { opacity: 2; }
+    0% { opacity: 1; }
     100% { opacity: 0; visibility: hidden; }
 }
 
@@ -41,22 +43,25 @@
 }
 
 /* Affiche le contenu après 3 secondes */
+body.loaded #loader-container {
+    display: none;
+}
+
 body.loaded #content {
     display: block;
 }
 
 /* Corps chargé pour le contenu */
 body.loaded {
-    overflow: hidden;
-    animation: showContent 5s forwards;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+        0deg,
+        rgba(147, 86, 220, 1) 0%,
+        rgba(255, 121, 218, 1) 100%
+    );
+    color: white;
 }
 
-/* Animation pour afficher le contenu après 3 secondes */
-@keyframes showContent {
-    0% { display: none; opacity: 0; }
-    1% { display: block; opacity: 0; }
-    100% { opacity: 1; }
-}
 
 
 :root {
@@ -77,11 +82,11 @@ body.loaded {
   .fa-solid .fa-heart {
 	color: #9356dc;
   }
-  .fa-solid {
 
-	opacity: 0px;
+  .fa-regular .fa-heart {
+	color:#9356dc;
+  
   }
-
   .heart-label input {
     display: none;
 	background-color: #9356dc;
@@ -940,4 +945,20 @@ header {
 
 }
 
- 
+ /* Style du loader partie 2 */
+body {
+    animation: addLoadedClass 3s forwards;
+}
+
+@keyframes addLoadedClass {
+    0% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+body:not(.loaded) #content {
+    display: none;
+}
+
+body.loaded #content {
+    display: block;
+}
