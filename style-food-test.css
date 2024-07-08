@@ -379,20 +379,7 @@ header {
   justify-content: center;
   font-size: 16px;
 }
-/*
-.tmp-label {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.tmp-label-price {
-  display: flex;
-  height: 73px;
-  align-items: center;
-}
-*/
 .tmp-rectangle:hover .tmp-tmp-price-check {
   margin-right: 0;
 }
@@ -406,7 +393,33 @@ fieldset {
   padding: 0;
   margin: 40px 0 0 0;
   min-width: 0;
+  opacity: 0;
+
 }
+
+@keyframes load {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+#groupe1  {
+  
+animation: 3s ease 0s normal forwards 1 load;
+}
+
+#groupe2 {
+  animation: 3s ease 0.5s normal forwards 1 load;
+  
+}
+
+#groupe3 {
+  animation: 3s ease 1s normal forwards 1 load;
+}
+
 
 .parent-container {
   margin-top: 40px;
