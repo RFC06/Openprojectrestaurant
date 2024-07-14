@@ -39,9 +39,6 @@ html {
 .fa-solid .fa-heart {
   color: violet;
 }
-.fa-solid {
-  opacity: 0px;
-}
 
 
 
@@ -199,7 +196,6 @@ header {
   background-color: var(--light-gray-color);
   gap: 0px;
   max-width: 1055px;
-  opacity: 0px;
   position: relative;
   margin: -51px auto 0 auto;
   padding: 51px 20px;
@@ -216,6 +212,7 @@ header {
 }
 
 .title-menu {
+  display:grid;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -302,6 +299,14 @@ header {
   display: none;
 }
 
+.tmp-input-label {
+  width:100%;
+  position: absolute;
+  height:100%;
+  z-index:20;
+
+}
+
 .tmp-rectangle {
   display: flex;
   justify-content: space-between;
@@ -314,6 +319,7 @@ header {
   padding-left: 14px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  z-index:10;
 }
 
 
@@ -380,11 +386,16 @@ header {
   font-size: 16px;
 }
 
-.tmp-rectangle:hover .tmp-tmp-price-check {
+/*  .tmp-rectangle:hover .tmp-tmp-price-check {
+  margin-right: 0;
+}
+  */
+
+.tmp-input-label:hover + .tmp-rectangle .tmp-tmp-price-check {
   margin-right: 0;
 }
 
-.tmp-input:checked + .tmp-rectangle .tmp-tmp-price-check {
+.tmp-input:checked ~ .tmp-rectangle .tmp-tmp-price-check {
   margin-right: 0;
 }
 
