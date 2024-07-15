@@ -21,7 +21,7 @@ body {
   margin-bottom: 20px;
 }
 
-h4{
+h4 {
   margin: 0;
   font-family: Shrikhand;
   font-size: 28px;
@@ -40,8 +40,6 @@ html {
   color: violet;
 }
 
-
-
 .small-line {
   width: 40px;
   height: 3px;
@@ -55,10 +53,7 @@ html {
   color: black;
   position: absolute;
   left: 17px;
-
 }
-
-
 
 /****** SECTION THREE ***********/
 .section-three .info-steps {
@@ -188,8 +183,6 @@ header {
   }
 }
 
-
-
 /* Styles pour la section des entrées, plats et desserts */
 
 .menu-section {
@@ -212,7 +205,7 @@ header {
 }
 
 .title-menu {
-  display:grid;
+  display: grid;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -270,7 +263,6 @@ header {
   }
 }
 
-
 .price {
   font-size: 14px;
   color: #000;
@@ -300,11 +292,10 @@ header {
 }
 
 .tmp-input-label {
-  width:100%;
+  width: 100%;
   position: absolute;
-  height:100%;
-  z-index:20;
-
+  height: 100%;
+  z-index: 20;
 }
 
 .tmp-rectangle {
@@ -319,9 +310,8 @@ header {
   padding-left: 14px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
-  z-index:10;
+  z-index: 10;
 }
-
 
 .tmp-tmp-label {
   overflow: hidden;
@@ -405,32 +395,28 @@ fieldset {
   margin: 40px 0 0 0;
   min-width: 0;
   opacity: 0;
-
 }
 
 @keyframes load {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-#groupe1  {
-  
-animation: 3s ease 0s normal forwards 1 load;
+#groupe1 {
+  animation: 3s ease 0s normal forwards 1 load;
 }
 
 #groupe2 {
   animation: 3s ease 0.5s normal forwards 1 load;
-  
 }
 
 #groupe3 {
   animation: 3s ease 1s normal forwards 1 load;
 }
-
 
 .parent-container {
   margin-top: 40px;
@@ -541,18 +527,19 @@ footer {
 
   .logo {
     order: 5;
-  }}
+  }
+}
 
-  .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    width: 150px;
-    height: auto;
-  }
+  width: 150px;
+  height: auto;
+}
 
 .price {
   position: absolute;
